@@ -88,12 +88,7 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-.nav-width {
-  min-width: 12em; 
-}
-.nav-link-width {
-  min-width: 5em; 
-}
+
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
@@ -103,7 +98,16 @@ body {
   }
 }
 
-
+/* custom settings after adapting from bootstrap examples
+.nav-width {
+  min-width: 12em; 
+}
+.nav-link-width {
+  min-width: 5em; 
+}
+#btn-login:hover {
+  background-color: rgba(39,215, 127, 1);
+}
 /*
  * Cover
  */
