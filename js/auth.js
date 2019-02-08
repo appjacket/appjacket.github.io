@@ -45,6 +45,7 @@ class Auth {
   displayButtons(){
     if (this.isAuthenticated()) {
       console.log("is authenticated");
+      this.login_button.text = "Logout"
       this.getProfile();
     }
   }
