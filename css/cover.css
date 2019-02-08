@@ -1,12 +1,17 @@
 /*
  * Globals
  */
-
+$primaryColor:
+$accentColor: #fff;
+$lightAccentColor: rgba(255,255,255,.25);
+$darkAccentColor: rgba(255,255,255,.25);
+$shaddowColor: rgba(0, 0, 0, .5);
+$popOutColor: rgba(81, 221, 151);
 /* Links */
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: $accentColor;
 }
 
 /* Custom default button */
@@ -15,8 +20,8 @@ a:hover {
 .btn-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background-color: $accentColor;
+  border: .05rem solid $accentColor;
 }
 
 /*
@@ -32,9 +37,9 @@ body {
 body {
   display: -ms-flexbox;
   display: flex;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  color: $accentColor;
+  text-shadow: 0 .05rem .1rem $shaddowColor;
+  box-shadow: inset 0 0 5rem $shaddowColor;
 }
 
 .max-container-height {
@@ -51,13 +56,6 @@ body {
  padding-top: 2em; 
   
 }
-/*
-.vertical-center {
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-*/
 
 /*
  * Header
@@ -80,7 +78,7 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: $lightAccentColor;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -88,8 +86,8 @@ body {
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: $accentColor;
+  border-bottom-color: $accentColor;
 }
 
 @media (min-width: 48em) {
@@ -109,8 +107,8 @@ body {
   min-width: 5em; 
 }
 #btn-auth:hover {
-  color: rgba(81, 221, 151);
-  border-bottom: .25rem solid rgba(81, 221, 151);
+  color: $popOutColor;
+  border-bottom: .25rem solid $popOutColor ;
 }
 /*
  * Cover
@@ -128,5 +126,5 @@ body {
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: $darkAccentColor;
 }
