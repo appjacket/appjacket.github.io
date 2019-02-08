@@ -30,8 +30,10 @@ window.addEventListener('load', function() {
   function getProfile() {
     if (!userProfile) {
       if (!accessToken) {
-        console.log('Access Token must exist to fetch profile');
-        webAuth.client.userInfo(accessToken, function(err, profile) {
+       console.log('Access Token must exist to fetch profile');
+     }
+
+     webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
           userProfile = profile;
           displayProfile();
@@ -83,7 +85,7 @@ window.addEventListener('load', function() {
       }
       displayButtons();
     });
-  }
+  });
 
   function localLogin(authResult) {
     // Set isLoggedIn flag in localStorage
