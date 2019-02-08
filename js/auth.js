@@ -26,17 +26,18 @@ class Auth {
   }
   
   handleAuthentication() {
+    var _this = this;
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
-        super.localLogin(authResult);
+        _this.localLogin(authResult);
       } else if (err) {
         console.log(err);
         alert(
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-      super.displayButtons();
+      _this.displayButtons();
     });
   }
   
