@@ -16,7 +16,6 @@ window.addEventListener('load', function() {
   
   if(!isAuthenticated()){
     loginBtn = document.getElementById('btn-login'); 
-  } else {
     logoutBtn = document.getElementById('btn-login');
   }
 
