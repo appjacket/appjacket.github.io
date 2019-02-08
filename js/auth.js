@@ -25,7 +25,7 @@ class Auth {
     }
   }
   
-  function getProfile() {
+  getProfile() {
     if (!userProfile) {
       if (!accessToken) {
        console.log('Access Token must exist to fetch profile');
@@ -39,11 +39,11 @@ class Auth {
     }
   }
   
-  function displayProfile(){
+  displayProfile(){
     console.log("not needed for now");
   }
   
-  function logout() {
+  logout() {
     // Remove isLoggedIn flag from localStorage
     localStorage.removeItem('isLoggedIn');
     // Remove tokens and expiry time
@@ -53,21 +53,21 @@ class Auth {
     displayButtons();
   }
   
-  function displayButtons(){
+  displayButtons(){
     if (isAuthenticated()) {
       console.log("is authenticated");
       getProfile();
     }
   }
   
-  function isAuthenticated(){
+  isAuthenticated(){
     // Check whether the current time is past the
     // Access Token's expiry time
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
 
-  function handleAuthentication() {
+  handleAuthentication() {
     webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
@@ -82,7 +82,7 @@ class Auth {
     });
   }
 
-  function localLogin(authResult) {
+  localLogin(authResult) {
     // Set isLoggedIn flag in localStorage
     localStorage.setItem('isLoggedIn', 'true');
     // Set the time that the access token will expire at
@@ -93,7 +93,7 @@ class Auth {
     this.idToken = authResult.idToken;
   }
 
-  function renewTokens() {
+  renewTokens() {
     webAuth.checkSession({}, (err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         localLogin(authResult);
