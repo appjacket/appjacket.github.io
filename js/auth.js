@@ -1,11 +1,11 @@
 class Auth {
-  var idToken;
-  var accessToken;
-  var expiresAt;
-  var webAuth;
-  var userProfile;
-
   constructor() {
+    this.idToken;
+    this.accessToken;
+    this.expiresAt;
+    this.webAuth;
+    this.userProfile;
+    
     if (window.location.href.indexOf("dev") != -1){
         webAuth = new auth0.WebAuth({
           domain: 'dev-jobs.auth0.com',
@@ -32,7 +32,7 @@ class Auth {
      }
      webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
-          userProfile = profile;
+          this.userProfile = profile;
           displayProfile();
         }
       });
@@ -47,9 +47,9 @@ class Auth {
     // Remove isLoggedIn flag from localStorage
     localStorage.removeItem('isLoggedIn');
     // Remove tokens and expiry time
-    accessToken = '';
-    idToken = '';
-    expiresAt = 0;
+    this.accessToken = '';
+    this.idToken = '';
+    this.expiresAt = 0;
     displayButtons();
   }
   
@@ -86,11 +86,11 @@ class Auth {
     // Set isLoggedIn flag in localStorage
     localStorage.setItem('isLoggedIn', 'true');
     // Set the time that the access token will expire at
-    expiresAt = JSON.stringify(
+    this.expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
     );
-    accessToken = authResult.accessToken;
-    idToken = authResult.idToken;
+    this.accessToken = authResult.accessToken;
+    this.idToken = authResult.idToken;
   }
 
   function renewTokens() {
