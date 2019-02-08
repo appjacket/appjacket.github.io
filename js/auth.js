@@ -24,7 +24,20 @@ class Auth {
         }); 
     }
   }
-  
+  handleAuthentication() {
+    this.webAuth.parseHash(function(err, authResult) {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = '';
+        localLogin(authResult);
+      } else if (err) {
+        console.log(err);
+        alert(
+          'Error: ' + err.error + '. Check the console for further details.'
+        );
+      }
+      displayButtons();
+    });
+  }
   getProfile() {
     if (!userProfile) {
       if (!accessToken) {
@@ -65,21 +78,6 @@ class Auth {
     // Access Token's expiry time
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
-  }
-  
-  handleAuthentication() {
-    this.webAuth.parseHash(function(err, authResult) {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
-        localLogin(authResult);
-      } else if (err) {
-        console.log(err);
-        alert(
-          'Error: ' + err.error + '. Check the console for further details.'
-        );
-      }
-      displayButtons();
-    });
   }
   
   localLogin(authResult) {
