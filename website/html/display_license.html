@@ -36,7 +36,7 @@
     </div>
   </header>
   <h1 class="cover-heading">UFP Software License</h1>
-  <div id="ufp-license"></div>
+  <div id="ufp-license" class="justify-content-left"></div>
   <footer class="footer mt-auto py-3">
     <div class="inner">
       <p>Thank you for your support!</p>
@@ -58,10 +58,24 @@
             url : "/LICENSE",
             dataType: "text",
             success : function (data) {
-                $("#ufp-license").html(data);
-            }
+             var landmarks = ["License Name:", "Version:", "The Points:", "1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "Copyright"];
+             var buffer;
+             var html_newlined_data="";
+             for (var character in data){
+                              buffer += data[character];
+                              for (var landmark in landmarks){
+                                if (buffer.includes(landmarks[landmark])){
+                                  var found_data = buffer.split(landmarks[landmark])[0];
+                                  if(landmark > 0){
+                                    html_newlined_data += found_data;
+                                  }
+                                  html_newlined_data += "</br>";
+                                  html_newlined_data += landmarks[landmark];
+                                  buffer = buffer.split(landmarks[landmark])[1];
+                                }
+                              }
+            }$("#ufp-license").html(html_newlined_data);}
         });
-      $("#ufp-license").css("class", "d-pad w-100 h-100");   
     </script> 
 
   </body>
