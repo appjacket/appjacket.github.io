@@ -35,5 +35,11 @@ window.addEventListener('load', function() {
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
+  
+  if (localStorage.getItem('isLoggedIn') === 'true') {
+    renewTokens();
+  } else {
+    handleAuthentication();
+  }
 
 });
