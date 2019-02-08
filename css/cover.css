@@ -13,17 +13,17 @@ $color: (
 a,
 a:focus,
 a:hover {
-  color: $accentColor;
+  color: #fff;
 }
 
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: map-get($color, popOut);;
+  color: rgba(81, 221, 151);
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: map-get($color,accent);
-  border: .05rem solid map-get($color,accent)
+  background-color: #fff;
+  border: .05rem solid #fff;
 }
 
 /*
@@ -33,15 +33,15 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: map-get($color,primary);;
+  background-color: #333;
 }
 
 body {
   display: -ms-flexbox;
   display: flex;
-  color: map-get($color,primary);
-  text-shadow: 0 .05rem .1rem map-get($color,shaddow);
-  box-shadow: inset 0 0 5rem map-get($color,shaddow);
+  color: #333
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .max-container-height {
@@ -73,14 +73,14 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: map-get($color,accent);
+  color: #fff;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: map-get($color,light);
+  border-bottom-color: rgba(255,255,255,.5);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -88,8 +88,8 @@ body {
 }
 
 .nav-masthead .active {
-  color: map-get($color,accent);
-  border-bottom-color: map-get($color,accent);
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 @media (min-width: 48em) {
@@ -109,8 +109,8 @@ body {
   min-width: 5em; 
 }
 #btn-auth:hover {
-  color: map-get($color,popOut);
-  border-bottom: .25rem solid map-get($color,popOut);
+  color: rgba(81, 221, 151);
+  border-bottom: .25rem solid rgba(81, 221, 151);
 }
 /*
  * Cover
@@ -128,5 +128,5 @@ body {
  * Footer
  */
 .mastfoot {
-  color: map-get($color,darkAccent);
+  color: rgba(0, 0, 0, .5);
 }
