@@ -37,13 +37,13 @@ window.addEventListener('load', function() {
         if (profile) {
           userProfile = profile;
           console.log("DT:");
-          console.log(JSON.stringify(userPorofile));
+          console.log(JSON.stringify(userProfile));
           displayProfile();
         }
       });
     } else {
       console.log("DT:");
-      console.log(JSON.stringify(userPorofile));
+      console.log(JSON.stringify(userProfile));
       displayProfile();
     }
   }
