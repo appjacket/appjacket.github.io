@@ -1,12 +1,14 @@
 /*
  * Globals
  */
-$primaryColor:
-$accentColor: #fff;
-$lightAccentColor: rgba(255,255,255,.25);
-$darkAccentColor: rgba(255,255,255,.25);
-$shaddowColor: rgba(0, 0, 0, .5);
-$popOutColor: rgba(81, 221, 151);
+$color: ( 
+  primary: #333
+  accent: #fff;
+  lightAccent: rgba(255,255,255,.25);
+  darkAccent: rgba(255,255,255,.25);
+  shaddow: rgba(0, 0, 0, .5);
+  popOut: rgba(81, 221, 151);
+)
 /* Links */
 a,
 a:focus,
@@ -18,10 +20,10 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: map-get($color, popOut);;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: $accentColor;
-  border: .05rem solid $accentColor;
+  background-color: map-get($color,accent);
+  border: .05rem solid map-get($color,accent)
 }
 
 /*
@@ -31,15 +33,15 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: map-get($color,primary);;
 }
 
 body {
   display: -ms-flexbox;
   display: flex;
-  color: $accentColor;
-  text-shadow: 0 .05rem .1rem $shaddowColor;
-  box-shadow: inset 0 0 5rem $shaddowColor;
+  color: map-get($color,primary);
+  text-shadow: 0 .05rem .1rem map-get($color,shaddow);
+  box-shadow: inset 0 0 5rem map-get($color,shaddow);
 }
 
 .max-container-height {
@@ -71,14 +73,14 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: map-get($color,accent);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: $lightAccentColor;
+  border-bottom-color: map-get($color,light);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -86,8 +88,8 @@ body {
 }
 
 .nav-masthead .active {
-  color: $accentColor;
-  border-bottom-color: $accentColor;
+  color: map-get($color,accent);
+  border-bottom-color: map-get($color,accent);
 }
 
 @media (min-width: 48em) {
@@ -107,8 +109,8 @@ body {
   min-width: 5em; 
 }
 #btn-auth:hover {
-  color: $popOutColor;
-  border-bottom: .25rem solid $popOutColor ;
+  color: map-get($color,popOut);
+  border-bottom: .25rem solid map-get($color,popOut);
 }
 /*
  * Cover
@@ -126,5 +128,5 @@ body {
  * Footer
  */
 .mastfoot {
-  color: $darkAccentColor;
+  color: map-get($color,darkAccent);
 }
