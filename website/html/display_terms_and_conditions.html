@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>AppJacket, Inc.</title>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="/css/cover.css" rel="stylesheet">
+  </head>
+  
+<body class="text-center">
+    <div class="cover-container d-flex p-4 mx-auto flex-column" style="
+    height: 100vh;
+    overflow: auto;
+">
+    <header class="masthead mb-0">
+    <div class="inner">
+      <h3 class="masthead-brand">AppJacket, Inc.</h3>
+      <nav class="nav-width nav nav-masthead justify-content-center">
+        <a class="nav-link-width nav-link active" href="/">Home</a>
+        <a class="nav-link-width nav-link" href="#">Store</a>
+        <a class="nav-link-width nav-link" id="btn-auth" href="#">Checking Login Status</a>
+      </nav>
+    </div>
+  </header>
+  <h1 class="cover-heading">UFP Software License</h1>
+  <div id="ufp-license" class="justify-content-left"></div>
+  <footer class="footer mt-auto py-3">
+    <div class="inner">
+      <p>Thank you for your support!</p>
+      <a href="/website/html/display_terms_and_conditions" target="_blank">terms and conditions</a>
+    </div>
+  </footer>
+</div>
+  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/auth.js"></script>
+    
+    <script>
+       $.ajax({
+            url : "/LICENSE",
+            dataType: "text",
+            success : function (data) {
+             var landmarks = ["License Name:", "Version:", "The Points:", "1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "Copyright"];
+             var buffer;
+             var html_newlined_data="<div class=\"d-flex flex-column\"><div class=\"d-flex align-items-start flex-wrap\"><p>";
+             for (var character in data){
+                              buffer += data[character];
+                              for (var landmark in landmarks){
+                                if (buffer.includes(landmarks[landmark])){
+                                  var found_data = buffer.split(landmarks[landmark])[0];
+                                  if(landmark > 0){
+                                    html_newlined_data += found_data;
+                                  }
+                                  html_newlined_data += "</p></div></br><div class=\"d-flex align-items-start flex-wrap\">";
+                                  html_newlined_data += landmarks[landmark];
+                                  buffer = buffer.split(landmarks[landmark])[1];
+                                }
+                              }
+            }
+            html_newlined_data += "</div></div>";
+            $("#ufp-license").html(html_newlined_data);}
+        });
+    </script> 
+
+  </body>
+</html>
