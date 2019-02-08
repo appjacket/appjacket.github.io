@@ -106,7 +106,7 @@ body {
   min-width: 5em; 
 }
 #btn-login:hover {
-  background-color: rgba(39,215, 127, 1);
+  color: rgba(39,215, 127, 1);
 }
 /*
  * Cover
