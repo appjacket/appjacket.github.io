@@ -13,10 +13,11 @@ window.addEventListener('load', function() {
 
   var loginBtn;
   var logoutBtn;
+  
   if(!isAuthenticated()){
     loginBtn = document.getElementById('btn-login'); 
   } else {
-    logoutBtn = document.getElementById('btn-logout');
+    logoutBtn = document.getElementById('btn-login');
   }
 
   loginBtn.addEventListener('click', function(e) {
