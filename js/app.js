@@ -25,7 +25,9 @@ window.addEventListener('load', function() {
     webAuth.authorize();
   });
 
-  logoutBtn.addEventListener('click', logout);
+  logoutBtn.addEventListener('click', function(e) {
+    logout();
+  });
   
   function logout() {
     // Remove isLoggedIn flag from localStorage
