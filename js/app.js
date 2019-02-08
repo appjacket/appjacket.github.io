@@ -13,7 +13,8 @@ window.addEventListener('load', function() {
 
   var authBtn;
   var usernameH3;
-  
+  var userProfile;
+
   authBtn = document.getElementById('btn-login'); 
   usernameH3 = document.getElementByClass('logged-in-username');
   
@@ -25,7 +26,23 @@ window.addEventListener('load', function() {
      logout(); 
     }
   });
+
+  function getProfile() {
+    if (!userProfile) {
+      if (!accessToken) {
+        console.log('Access Token must exist to fetch profile');
+        webAuth.client.userInfo(accessToken, function(err, profile) {
+        if (profile) {
+          userProfile = profile;
+          displayProfile();
+        }
+      });
+    } else {
+      displayProfile();
+    }
+  }
   
+    
   function logout() {
     // Remove isLoggedIn flag from localStorage
     localStorage.removeItem('isLoggedIn');
@@ -39,6 +56,7 @@ window.addEventListener('load', function() {
   function displayButtons(){
     if (isAuthenticated()) {
       console.log("is authenticated");
+      usernameH3.text = 
       authBtn.text = "Logout";
     } else {
       authBtn.text = "Login";
