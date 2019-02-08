@@ -19,9 +19,6 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-#btn-login{
-  min-width: 5em;
-}
 /*
  * Base structure
  */
@@ -91,7 +88,12 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+.nav-width {
+  min-width: 15em; 
+}
+.nav-link-width {
+  min-width: 5em; 
+}
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
