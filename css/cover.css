@@ -13,10 +13,10 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: rgba(81, 221, 151);
+  color: #vvv;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background-color: rgba(81, 221, 151);
+  border: .05rem solid rgba(81, 221, 151);
 }
 
 /*
