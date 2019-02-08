@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
 
   authBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    if(this.text == "Logout"){
+    if(this.text == "Login"){
       webAuth.authorize();
     }else {
      logout(); 
