@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
   }
   
   function displayProfile(){
-    usernameH3.text = userProfile.nickname + userProfile.user_id;
+    usernameH3.innerText = userProfile.nickname + userProfile.user_id;
     console.log("DT: " + JSON.stringify(userProfile, null, 2));
   }
   
@@ -62,7 +62,6 @@ window.addEventListener('load', function() {
   function displayButtons(){
     if (isAuthenticated()) {
       console.log("is authenticated");
-      usernameH3.text = 
       authBtn.text = "Logout";
     } else {
       authBtn.text = "Login";
