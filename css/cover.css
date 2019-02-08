@@ -20,7 +20,7 @@ a:hover {
 }
 
 #btn-login{
-  width:55px;
+  min-width: 5em;
 }
 /*
  * Base structure
