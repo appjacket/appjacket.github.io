@@ -38,6 +38,7 @@ window.addEventListener('load', function() {
   
   function displayButtons(){
     if (isAuthenticated()) {
+      console.log("is authenticated");
       authBtn.text = "Logout";
     } else {
       authBtn.text = "Login";
