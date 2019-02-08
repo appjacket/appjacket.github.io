@@ -11,21 +11,19 @@ window.addEventListener('load', function() {
     redirectUri: window.location.href
   });
 
-  var loginBtn;
-  var logoutBtn;
+  var authBtn;
   
   if(!isAuthenticated()){
-    loginBtn = document.getElementById('btn-login'); 
-    logoutBtn = document.getElementById('btn-login');
+    authBtn = document.getElementById('btn-login'); 
   }
 
-  loginBtn.addEventListener('click', function(e) {
+  authBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    webAuth.authorize();
-  });
-
-  logoutBtn.addEventListener('click', function(e) {
-    logout();
+    if(this.text == "Logout"){
+      webAuth.authorize();
+    }else {
+     logout(); 
+    }
   });
   
   function logout() {
