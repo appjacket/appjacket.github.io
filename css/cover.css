@@ -10,10 +10,15 @@ a:hover {
 }
 
 /* Custom default button */
-.btn-secondary,
+.btn-secondary {
+  color: #000;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #vvv;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: rgba(81, 221, 151);
   border: .05rem solid rgba(81, 221, 151);
