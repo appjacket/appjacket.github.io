@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
   var userProfile;
 
   authBtn = document.getElementById('btn-login'); 
-  usernameH3 = document.getElementsByClassName('logged-in-username');
+  usernameH3 = document.getElementById('logged-in-username');
   
   authBtn.addEventListener('click', function(e) {
     e.preventDefault();
