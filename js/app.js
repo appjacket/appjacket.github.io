@@ -36,7 +36,12 @@ window.addEventListener('load', function() {
   }
   
   function handleAuthentication(){
-    loginBtn.text = "Logout";
+    
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      loginBtn.text = "Logout";
+    } else {
+      loginBtn.text = "Login";
+    }
   }
   
   if (localStorage.getItem('isLoggedIn') === 'true') {
