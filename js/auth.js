@@ -24,6 +24,12 @@ class Auth {
         }); 
     }
   }
+  displayButtons(){
+    if (isAuthenticated()) {
+      console.log("is authenticated");
+      this.getProfile();
+    }
+  }
   handleAuthentication() {
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
@@ -97,12 +103,7 @@ class Auth {
       this.displayButtons();
     });
   }
-  displayButtons(){
-    if (isAuthenticated()) {
-      console.log("is authenticated");
-      this.getProfile();
-    }
-  }
+  
   handle_pageload() {
     if (localStorage.getItem('isLoggedIn') === 'true') {
      this.renewTokens();
