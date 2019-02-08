@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
   }
   
   function displayButtons(){
-    if (!isAuthenticated()) {
+    if (isAuthenticated()) {
       logoutBtn.text = "Logout";
     } else {
       loginBtn.text = "Login";
