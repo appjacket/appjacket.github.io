@@ -12,4 +12,5 @@ window.addEventListener('load', function() {
     }
   });
 
+  authEngine.handle_pageload();
 });
