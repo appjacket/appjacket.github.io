@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
   }
   
   function displayProfile(){
-    usernameH3.innerHTML = "hello";
+    usernameH3.innerHTML = userProfile["nickname"];
     console.log("DT: " + JSON.stringify(userProfile, null, 2));
   }
   
