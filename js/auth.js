@@ -24,12 +24,7 @@ class Auth {
         }); 
     }
   }
-  displayButtons(){
-    if (isAuthenticated()) {
-      console.log("is authenticated");
-      this.getProfile();
-    }
-  }
+  
   handleAuthentication() {
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
@@ -44,6 +39,14 @@ class Auth {
       displayButtons();
     });
   }
+  
+  displayButtons(){
+    if (isAuthenticated()) {
+      console.log("is authenticated");
+      this.getProfile();
+    }
+  }
+  
   getProfile() {
     if (!userProfile) {
       if (!accessToken) {
