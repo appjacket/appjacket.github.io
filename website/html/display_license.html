@@ -60,7 +60,7 @@
             success : function (data) {
              var landmarks = ["License Name:", "Version:", "The Points:", "1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "Copyright"];
              var buffer;
-             var html_newlined_data="<div class=\"d-flex flex-column\"><div class=\"d-flex align-items-start\">";
+             var html_newlined_data="<div class=\"d-flex flex-column\"><div class=\"d-flex align-items-start flex-wrap\">";
              for (var character in data){
                               buffer += data[character];
                               for (var landmark in landmarks){
@@ -69,7 +69,7 @@
                                   if(landmark > 0){
                                     html_newlined_data += found_data;
                                   }
-                                  html_newlined_data += "</div></br><div class=\"d-flex align-items-start\">";
+                                  html_newlined_data += "</div></br><div class=\"d-flex align-items-start flex-wrap\">";
                                   html_newlined_data += landmarks[landmark];
                                   buffer = buffer.split(landmarks[landmark])[1];
                                 }
