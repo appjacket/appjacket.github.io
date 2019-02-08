@@ -50,7 +50,7 @@ class Auth {
   
   getProfile() {
     var _this = this;
-    if (!uthis.serProfile) {
+    if (!this.userProfile) {
       if (!this.accessToken) {
        console.log('Access Token must exist to fetch profile');
      }
