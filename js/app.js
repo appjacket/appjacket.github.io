@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     domain: 'dev-jobs.auth0.com',
     clientID: 'Zx2LiW55N9O1YqIE49Q70LV2eDEXpIl1',
     responseType: 'token id_token',
-    scope: 'openid',
+    scope: 'openid profile',
     redirectUri: window.location.href
   });
 
