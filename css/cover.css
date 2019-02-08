@@ -19,7 +19,9 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-
+btn-login{
+  min-width:55px;
+}
 /*
  * Base structure
  */
