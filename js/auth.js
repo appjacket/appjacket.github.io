@@ -33,7 +33,7 @@ class Auth {
      webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
           this.userProfile = profile;
-          displayProfile();
+          this.displayProfile();
         }
       });
     }
@@ -50,13 +50,13 @@ class Auth {
     this.accessToken = '';
     this.idToken = '';
     this.expiresAt = 0;
-    displayButtons();
+    this.displayButtons();
   }
   
   displayButtons(){
     if (isAuthenticated()) {
       console.log("is authenticated");
-      getProfile();
+      this.getProfile();
     }
   }
   
@@ -68,17 +68,17 @@ class Auth {
   }
 
   handleAuthentication() {
-    webAuth.parseHash(function(err, authResult) {
+    this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
-        localLogin(authResult);
+        this.localLogin(authResult);
       } else if (err) {
         console.log(err);
         alert(
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-      displayButtons();
+      this.displayButtons();
     });
   }
 
@@ -94,24 +94,24 @@ class Auth {
   }
 
   renewTokens() {
-    webAuth.checkSession({}, (err, authResult) => {
+    this.webAuth.checkSession({}, (err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        localLogin(authResult);
+        this.localLogin(authResult);
       } else if (err) {
         alert(
             'Could not get a new token '  + err.error + ':' + err.error_description + '.'
         );
-        logout();
+        this.logout();
       }
-      displayButtons();
+      this.displayButtons();
     });
   }
   
   handle_pageload() {
     if (localStorage.getItem('isLoggedIn') === 'true') {
-     renewTokens();
+     this.renewTokens();
     } else {
-      handleAuthentication();
+      this.handleAuthentication();
     }
   }
 
