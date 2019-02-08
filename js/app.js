@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
   }
   
   function displayButtons(){
-    if (localStorage.getItem('isLoggedIn') === 'true') {
+    if (!isAuthenticated()) {
       logoutBtn.text = "Logout";
     } else {
       loginBtn.text = "Login";
