@@ -36,10 +36,14 @@ window.addEventListener('load', function() {
      webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
           userProfile = profile;
+          console.log("DT:");
+          console.log(JSON.stringify(userPorofile));
           displayProfile();
         }
       });
     } else {
+      console.log("DT:");
+      console.log(JSON.stringify(userPorofile));
       displayProfile();
     }
   }
