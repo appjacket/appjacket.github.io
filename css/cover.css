@@ -107,6 +107,7 @@ body {
 }
 #btn-login:hover {
   color: rgba(39,215, 127, 1);
+  border: .05rem solid rgba(39,215, 127, 1);
 }
 /*
  * Cover
