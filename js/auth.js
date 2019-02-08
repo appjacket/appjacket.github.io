@@ -83,13 +83,14 @@ class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.localLogin(authResult);
+        this.displayButtons();
       } else if (err) {
         console.log(err);
         alert(
           'Error: ' + err.error + '. Check the console for further details.'
         );
+        this.displayButtons();
       }
-      this.displayButtons();
     });
   }
 
