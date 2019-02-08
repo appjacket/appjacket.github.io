@@ -108,7 +108,7 @@ body {
 .nav-link-width {
   min-width: 5em; 
 }
-#btn-login:hover {
+#btn-auth:hover {
   color: rgba(81, 221, 151);
   border-bottom: .25rem solid rgba(81, 221, 151) transparent;
 }
