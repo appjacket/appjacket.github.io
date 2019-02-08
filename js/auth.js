@@ -42,7 +42,7 @@ class Auth {
   }
   
   displayButtons(){
-    if (isAuthenticated()) {
+    if (this.isAuthenticated()) {
       console.log("is authenticated");
       this.getProfile();
     }
