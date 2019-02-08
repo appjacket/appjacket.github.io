@@ -44,7 +44,10 @@ window.addEventListener('load', function() {
     }
   }
   
-    
+  function displayProfile(){
+    usernameH3.text = userProfile.nickname;
+  }
+  
   function logout() {
     // Remove isLoggedIn flag from localStorage
     localStorage.removeItem('isLoggedIn');
