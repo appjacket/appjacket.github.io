@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
   
-  var authEngine = Auth();
+  var authEngine = new Auth();
   var authBtn = document.getElementById('btn-login'); 
   
   authBtn.addEventListener('click', function(e) {
