@@ -12,11 +12,11 @@ window.addEventListener('load', function() {
   });
 
   var authBtn;
+  var usernameH3;
   
-  if(!isAuthenticated()){
-    authBtn = document.getElementById('btn-login'); 
-  }
-
+  authBtn = document.getElementById('btn-login'); 
+  usernameH3 = document.getElementByClass('logged-in-username');
+  
   authBtn.addEventListener('click', function(e) {
     e.preventDefault();
     if(this.text == "Login"){
