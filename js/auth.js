@@ -66,13 +66,6 @@ class Auth {
     this.displayButtons();
   }
   
-  displayButtons(){
-    if (isAuthenticated()) {
-      console.log("is authenticated");
-      this.getProfile();
-    }
-  }
-  
   isAuthenticated(){
     // Check whether the current time is past the
     // Access Token's expiry time
@@ -104,7 +97,12 @@ class Auth {
       this.displayButtons();
     });
   }
-  
+  displayButtons(){
+    if (isAuthenticated()) {
+      console.log("is authenticated");
+      this.getProfile();
+    }
+  }
   handle_pageload() {
     if (localStorage.getItem('isLoggedIn') === 'true') {
      this.renewTokens();
