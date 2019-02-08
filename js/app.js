@@ -23,6 +23,11 @@ window.addEventListener('load', function() {
     e.preventDefault();
     webAuth.authorize();
   });
+
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    logout();
+  });
   
   function logout() {
     // Remove isLoggedIn flag from localStorage
@@ -34,6 +39,14 @@ window.addEventListener('load', function() {
     displayButtons();
   }
   
+  function displayButtons(){
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      logoutBtn.text = "Logout";
+    } else {
+      loginBtn.text = "Login";
+    }
+  }
+  
   function isAuthenticated() {
     // Check whether the current time is past the
     // Access Token's expiry time
@@ -41,13 +54,8 @@ window.addEventListener('load', function() {
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
   
-  function handleAuthentication(){
+  function handleAuthentication(){ 
     
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-      loginBtn.text = "Logout";
-    } else {
-      loginBtn.text = "Login";
-    }
   }
   
   if (localStorage.getItem('isLoggedIn') === 'true') {
