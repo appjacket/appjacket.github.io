@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
 
      webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
-          userProfile = JSON.parse(profile);
+          userProfile = profile;
           console.log("DT:");
           console.log(JSON.stringify(userProfile));
           displayProfile();
@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
   }
   
   function displayProfile(){
-    usernameH3.innerText = userProfile.nickname;
+    usernameH3.innerText = userProfile["nickname"];
     console.log("DT: " + JSON.stringify(userProfile, null, 2));
   }
   
