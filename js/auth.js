@@ -1,6 +1,6 @@
 class Auth {
-  constructor(login_button) {
-    this.login_button = login_button;
+  constructor(auth_button) {
+    this.auth_button = auth_button;
     this.idToken;
     this.accessToken;
     this.expiresAt;
@@ -45,8 +45,10 @@ class Auth {
   displayButtons(){
     if (this.isAuthenticated()) {
       console.log("is authenticated");
-      this.login_button.text = "Logout"
+      this.auth_button.text = "Logout"
       this.getProfile();
+    } else {
+      this.auth_button.text = "Login" 
     }
   }
   
