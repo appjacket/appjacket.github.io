@@ -49,14 +49,15 @@ class Auth {
   }
   
   getProfile() {
-    if (!userProfile) {
-      if (!accessToken) {
+    var _this = this;
+    if (!uthis.serProfile) {
+      if (!this.accessToken) {
        console.log('Access Token must exist to fetch profile');
      }
-     webAuth.client.userInfo(accessToken, function(err, profile) {
+     this.webAuth.client.userInfo(this.accessToken, function(err, profile) {
         if (profile) {
-          this.userProfile = profile;
-          this.displayProfile();
+          _this.userProfile = profile;
+          _this.displayProfile();
         }
       });
     }
