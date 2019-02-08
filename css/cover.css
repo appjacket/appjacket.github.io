@@ -49,13 +49,16 @@ body {
 }
 .cover-body {
  padding-top: 2em; 
+  
 }
+/*
 .vertical-center {
-  /* margin: 0; */
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+*/
+
 /*
  * Header
  */
@@ -106,8 +109,8 @@ body {
   min-width: 5em; 
 }
 #btn-login:hover {
-  color: rgba(39,215, 127, 1);
-  border: .05rem solid rgba(39,215, 127, 1);
+  color: rgba(81, 221, 151);
+  border-bottom: .05rem solid rgba(81, 221, 151) transparent;
 }
 /*
  * Cover
