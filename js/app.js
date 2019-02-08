@@ -36,21 +36,16 @@ window.addEventListener('load', function() {
      webAuth.client.userInfo(accessToken, function(err, profile) {
         if (profile) {
           userProfile = profile;
-          console.log("DT:");
-          console.log(JSON.stringify(userProfile));
           displayProfile();
         }
       });
     } else {
-      console.log("DT:");
-      console.log(JSON.stringify(userProfile));
       displayProfile();
     }
   }
   
   function displayProfile(){
     usernameH3.innerHTML = userProfile["nickname"];
-    console.log("DT: " + JSON.stringify(userProfile, null, 2));
   }
   
   function logout() {
@@ -70,6 +65,7 @@ window.addEventListener('load', function() {
       getProfile();
     } else {
       authBtn.text = "Login";
+      usernameH3.innerHTML = "";
     }
   }
   
