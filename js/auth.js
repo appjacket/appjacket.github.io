@@ -56,7 +56,7 @@ class Auth {
       if (!this.accessToken) {
        console.log('Access Token must exist to fetch profile');
      }
-     this.webAuth.client.userInfo(this.accessToken, function(err, profile) {
+     this.webAuth.client.userInfo(_this.accessToken, function(err, profile) {
         if (profile) {
           _this.userProfile = profile;
           _this.displayProfile();
