@@ -43,7 +43,7 @@ body {
 }
 
 .cover-container-header {
-  
+  max-width: 62em;
 }
 
 /*
