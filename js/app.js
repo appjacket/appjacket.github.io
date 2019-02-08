@@ -55,7 +55,7 @@ window.addEventListener('load', function() {
   }
   
   function handleAuthentication(){ 
-    
+    displayButtons();
   }
   
   if (localStorage.getItem('isLoggedIn') === 'true') {
