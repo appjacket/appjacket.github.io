@@ -67,6 +67,7 @@ window.addEventListener('load', function() {
     if (isAuthenticated()) {
       console.log("is authenticated");
       authBtn.text = "Logout";
+      getProfile();
     } else {
       authBtn.text = "Login";
     }
