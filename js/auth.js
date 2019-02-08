@@ -79,7 +79,7 @@ class Auth {
   isAuthenticated(){
     // Check whether the current time is past the
     // Access Token's expiry time
-    var expiration = parseInt(expiresAt) || 0;
+    var expiration = parseInt(this.expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
   
