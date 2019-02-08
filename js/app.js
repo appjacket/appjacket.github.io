@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
 
   var loginBtn;
   var logoutBtn;
-  if(document.getElementById('btn-login').text == "Login"){
+  if(!isAuthenticated()){
     loginBtn = document.getElementById('btn-login'); 
   } else {
     logoutBtn = document.getElementById('btn-logout');
@@ -24,10 +24,7 @@ window.addEventListener('load', function() {
     webAuth.authorize();
   });
 
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    logout();
-  });
+  logoutBtn.addEventListener('click', logout);
   
   function logout() {
     // Remove isLoggedIn flag from localStorage
@@ -47,15 +44,64 @@ window.addEventListener('load', function() {
     }
   }
   
-  function isAuthenticated() {
+  function isAuthenticated(){
     // Check whether the current time is past the
     // Access Token's expiry time
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
-  
-  function handleAuthentication(){ 
-    displayButtons();
+
+  function handleAuthentication() {
+    webAuth.parseHash(function(err, authResult) {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = '';
+        localLogin(authResult);
+      } else if (err) {
+        console.log(err);
+        alert(
+          'Error: ' + err.error + '. Check the console for further details.'
+        );
+      }
+      displayButtons();
+    });
+  }
+
+  function localLogin(authResult) {
+    // Set isLoggedIn flag in localStorage
+    localStorage.setItem('isLoggedIn', 'true');
+    // Set the time that the access token will expire at
+    expiresAt = JSON.stringify(
+      authResult.expiresIn * 1000 + new Date().getTime()
+    );
+    accessToken = authResult.accessToken;
+    idToken = authResult.idToken;
+  }
+
+  function renewTokens() {
+    webAuth.checkSession({}, (err, authResult) => {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        localLogin(authResult);
+      } else if (err) {
+        alert(
+            'Could not get a new token '  + err.error + ':' + err.error_description + '.'
+        );
+        logout();
+      }
+      displayButtons();
+    });
+  }
+
+  function displayButtons() {
+    if (isAuthenticated()) {
+      loginBtn.style.display = 'none';
+      logoutBtn.style.display = 'inline-block';
+      loginStatus.innerHTML = 'You are logged in!';
+    } else {
+      loginBtn.style.display = 'inline-block';
+      logoutBtn.style.display = 'none';
+      loginStatus.innerHTML =
+        'You are not logged in! Please log in to continue.';
+    }
   }
   
   if (localStorage.getItem('isLoggedIn') === 'true') {
