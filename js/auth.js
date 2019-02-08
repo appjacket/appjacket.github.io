@@ -29,7 +29,7 @@ class Auth {
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
-        localLogin(authResult);
+        this.localLogin(authResult);
       } else if (err) {
         console.log(err);
         alert(
