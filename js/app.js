@@ -46,7 +46,7 @@ window.addEventListener('load', function() {
   
   function displayProfile(){
     usernameH3.text = userProfile.nickname;
-    console.log(JSON.stringify(userProfile, null, 2));
+    console.log("DT: " + JSON.stringify(userProfile, null, 2));
   }
   
   function logout() {
