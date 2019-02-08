@@ -110,7 +110,7 @@ body {
 }
 #btn-login:hover {
   color: rgba(81, 221, 151);
-  border-bottom: .05rem solid rgba(81, 221, 151) transparent;
+  border-bottom: .25rem solid rgba(81, 221, 151) transparent;
 }
 /*
  * Cover
