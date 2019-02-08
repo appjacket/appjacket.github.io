@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>AppJacket, Inc.</title>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="/css/cover.css" rel="stylesheet">
+  </head>
+  
+  <body class="text-center">
+<body class="text-center">
+    <div class="cover-container d-flex p-4 mx-auto flex-column" style="
+    height: 100vh;
+    overflow: auto;
+">
+    <header class="masthead mb-0">
+    <div class="inner">
+      <h3 class="masthead-brand">AppJacket, Inc.</h3>
+      <nav class="nav-width nav nav-masthead justify-content-center">
+        <a class="nav-link-width nav-link active" href="#">Home</a>
+        <a class="nav-link-width nav-link" href="#">Store</a>
+        <a class="nav-link-width nav-link" id="btn-auth" href="#">Checking Login Status</a>
+      </nav>
+    </div>
+  </header>
+  <h1 class="cover-heading">Welcome to AppJacket!</h1>
+    <div class="cover-wrapper" style="min-height:60vh; overflow: auto">
+      <div class="cover-container d-flex p-4 mt-1 mb-4 flex-column justify-content-around">
+        <p class="lead">We use deep learning and artificial intelligence to analyze and interpret content and human behaviours, and to create and market our products and services.</p><p class="lead">
+           <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </div>
+    
+    </div>
+  <footer class="footer mt-auto py-3">
+    <div class="inner">
+      <p>Thank you for your support!</p>
+    </div>
+  </footer>
+</div>
+  
+  
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/auth.js"></script>
+
+  </body>
+</html>
