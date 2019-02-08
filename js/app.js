@@ -85,7 +85,7 @@ window.addEventListener('load', function() {
       }
       displayButtons();
     });
-  });
+  }
 
   function localLogin(authResult) {
     // Set isLoggedIn flag in localStorage
