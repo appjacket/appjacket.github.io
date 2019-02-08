@@ -42,6 +42,12 @@ body {
   /* max-width: 42em; */
 }
 
+.cover-heading {
+  padding-top: 2rem;
+}
+.cover_body {
+ padding-top: 2em; 
+}
 /*
  * Header
  */
