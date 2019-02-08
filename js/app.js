@@ -16,7 +16,6 @@ window.addEventListener('load', function() {
   loginBtn.addEventListener('click', function(e) {
     e.preventDefault();
     webAuth.authorize();
-    loginBtn.text = "Logout";
   });
   
   function logout() {
@@ -34,6 +33,10 @@ window.addEventListener('load', function() {
     // Access Token's expiry time
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
+  }
+  
+  function handleAuthentication(){
+    loginBtn.text = "Logout";
   }
   
   if (localStorage.getItem('isLoggedIn') === 'true') {
