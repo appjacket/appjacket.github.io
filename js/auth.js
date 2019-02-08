@@ -66,7 +66,18 @@ class Auth {
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
-
+  
+  localLogin(authResult) {
+    // Set isLoggedIn flag in localStorage
+    localStorage.setItem('isLoggedIn', 'true');
+    // Set the time that the access token will expire at
+    this.expiresAt = JSON.stringify(
+      authResult.expiresIn * 1000 + new Date().getTime()
+    );
+    this.accessToken = authResult.accessToken;
+    this.idToken = authResult.idToken;
+  }
+  
   handleAuthentication() {
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
@@ -80,17 +91,6 @@ class Auth {
       }
       this.displayButtons();
     });
-  }
-
-  localLogin(authResult) {
-    // Set isLoggedIn flag in localStorage
-    localStorage.setItem('isLoggedIn', 'true');
-    // Set the time that the access token will expire at
-    this.expiresAt = JSON.stringify(
-      authResult.expiresIn * 1000 + new Date().getTime()
-    );
-    this.accessToken = authResult.accessToken;
-    this.idToken = authResult.idToken;
   }
 
   renewTokens() {
