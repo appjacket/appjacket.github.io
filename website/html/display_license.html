@@ -57,6 +57,13 @@
     <script src="/js/auth.js"></script>
     
     <script>
+      $.ajax({
+            url : "/LICENSE",
+            dataType: "text",
+            success : function (data) {
+                $("#ufp-license").html(data);
+            }
+        });
       $("#ufp-license").css("class", "d-pad w-100 h-100");   
     </script> 
 
