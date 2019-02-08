@@ -11,7 +11,13 @@ window.addEventListener('load', function() {
     redirectUri: window.location.href
   });
 
-  var loginBtn = document.getElementById('btn-login');
+  var loginBtn;
+  var logoutBtn;
+  if(document.getElementById('btn-login').text == "Login"){
+    loginBtn = document.getElementById('btn-login'); 
+  } else {
+    logoutBtn = document.getElementById('btn-login');
+  }
 
   loginBtn.addEventListener('click', function(e) {
     e.preventDefault();
