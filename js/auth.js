@@ -67,6 +67,21 @@ class Auth {
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
   
+  handleAuthentication() {
+    this.webAuth.parseHash(function(err, authResult) {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = '';
+        localLogin(authResult);
+      } else if (err) {
+        console.log(err);
+        alert(
+          'Error: ' + err.error + '. Check the console for further details.'
+        );
+      }
+      displayButtons();
+    });
+  }
+  
   localLogin(authResult) {
     // Set isLoggedIn flag in localStorage
     localStorage.setItem('isLoggedIn', 'true');
@@ -78,22 +93,6 @@ class Auth {
     this.idToken = authResult.idToken;
   }
   
-  handleAuthentication() {
-    this.webAuth.parseHash(function(err, authResult) {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
-        Auth.localLogin(authResult);
-        Auth.displayButtons();
-      } else if (err) {
-        console.log(err);
-        alert(
-          'Error: ' + err.error + '. Check the console for further details.'
-        );
-        Auth.displayButtons();
-      }
-    });
-  }
-
   renewTokens() {
     this.webAuth.checkSession({}, (err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
