@@ -36,7 +36,7 @@ class Auth {
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-      displayButtons();
+      //displayButtons();
     });
   }
   
