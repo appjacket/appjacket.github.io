@@ -48,6 +48,9 @@ body {
 .cover_body {
  padding-top: 2em; 
 }
+.cover_button {
+  padding-top: 2em;
+}
 /*
  * Header
  */
