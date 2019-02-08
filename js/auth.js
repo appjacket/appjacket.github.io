@@ -1,5 +1,6 @@
 class Auth {
-  constructor() {
+  constructor(login_button) {
+    this.login_button = login_button;
     this.idToken;
     this.accessToken;
     this.expiresAt;
