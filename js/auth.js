@@ -107,10 +107,12 @@ class Auth {
     });
   }
   
-  if (localStorage.getItem('isLoggedIn') === 'true') {
-    renewTokens();
-  } else {
-    handleAuthentication();
+  handle_pageload() {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+     renewTokens();
+    } else {
+      handleAuthentication();
+    }
   }
 
 }
