@@ -1,14 +1,7 @@
 /*
  * Globals
  */
-$color: ( 
-  primary: #333,
-  accent: #fff,
-  lightAccent: rgba(255,255,255,.25),
-  darkAccent: rgba(255,255,255,.25),
-  shaddow: rgba(0, 0, 0, .5),
-  popOut: rgba(81, 221, 151)
-)
+
 /* Links */
 a,
 a:focus,
