@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
 
-  var authBtn = document.getElementById('btn-auth'); 
-  var authEngine = new Auth(authBtn);
+  var authBtn = document.getElementById('btn-auth');
+  var authEngine = new Auth(authBtn, logged_in_stuff);
   
   authBtn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -36,3 +36,16 @@ window.addEventListener('load', function() {
     });
   
 });
+function logged_in_stuff(){
+  display_workspace();
+}
+function display_workspace(){
+  $("#overlay").css('background-color',"#fff").css({
+    position: "absolute",
+    width: $(".workspace").width(),
+    height: $(".workspace").height(),
+    left: 0,
+    top: 0,
+    zIndex: 1000000  // to be on the safe side
+  }).appendTo($(".workspace").css("position", "relative"));
+}
