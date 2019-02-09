@@ -1,11 +1,12 @@
 class Auth {
-  constructor(auth_button) {
+  constructor(auth_button, login_function) {
     this.auth_button = auth_button;
     this.idToken;
     this.accessToken;
     this.expiresAt;
     this.webAuth;
     this.userProfile;
+    this.login_function = login_function;
     
     if (window.location.href.indexOf("dev") != -1){
         this.webAuth = new auth0.WebAuth({
@@ -47,6 +48,7 @@ class Auth {
       console.log("is authenticated");
       this.auth_button.text = "Logout"
       this.getProfile();
+      this.login_function(this.userProfile);
     } else {
       this.auth_button.text = "Login" 
     }
