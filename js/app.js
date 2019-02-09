@@ -36,7 +36,8 @@ window.addEventListener('load', function() {
     });
   
 });
-function logged_in_stuff(){
+function logged_in_stuff(profile){
+  console.log(JSON.stringify(profile));
   display_workspace();
 }
 function display_workspace(){
