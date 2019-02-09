@@ -47,7 +47,7 @@ function display_workspace(){
     width: $(".workspace").width(),
     height: $(".workspace").height(),
     left: 0,
-    top: 5,
+    top: 10,
     zIndex: 1000000  // to be on the safe side
   }).appendTo($(".workspace").css("position", "relative"));
 }
