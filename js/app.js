@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
     }else {
      authEngine.logout(); 
       $("#btn-auth").css("border-bottom", "0em");
+      $(".overlay").remove();
     }
   });
 
