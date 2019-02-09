@@ -21,4 +21,18 @@ window.addEventListener('load', function() {
     function(){$(btn_active).css("border-bottom",old_btn_active_settings);}
   );
   
+  /*
+  * https://stackoverflow.com/a/40447414
+  */
+  var resizeTimer;
+  $(window).resize(function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        var container_width = $('.workspace').width(); 
+        var container_height = $('.workspace').height();
+        $(".overlay").width = container_width;
+        $(".overlay").height = container_height;
+      }, 200);
+    });
+  
 });
