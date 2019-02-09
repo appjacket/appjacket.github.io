@@ -45,7 +45,7 @@ function display_workspace(){
   $("#overlay").css('background-color',"#fff").css({
     position: "absolute",
     width: $(".workspace").width(),
-    height: $(".workspace").height(),
+    height: $(".workspace").height() - 5px,
     left: 0,
     top: 0,
     zIndex: 1000000  // to be on the safe side
