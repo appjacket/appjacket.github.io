@@ -45,9 +45,9 @@ function display_workspace(){
   $("#overlay").css('background-color',"#fff").css({
     position: "absolute",
     width: $(".workspace").width(),
-    height: $(".workspace").height() - 5px,
+    height: $(".workspace").height(),
     left: 0,
-    top: 0,
+    top: 5px,
     zIndex: 1000000  // to be on the safe side
   }).appendTo($(".workspace").css("position", "relative"));
 }
