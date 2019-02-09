@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
       authEngine.webAuth.authorize();
     }else {
      authEngine.logout(); 
+      $("#btn-auth").css("border-bottom", "0em");
     }
   });
 
