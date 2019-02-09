@@ -50,4 +50,12 @@ function display_workspace(){
     top: 10,
     zIndex: 1000000  // to be on the safe side
   }).appendTo($(".workspace").css("position", "relative"));
+  
+$("<div/>").css("width","15%")
+  .css("height","100%")
+  .css("border-right","#000")
+  .css("border-right-style","solid")
+  .css("border-right-width","thin")
+  .appendTo($("#overlay"));
+  
 }
