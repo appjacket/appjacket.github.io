@@ -2,10 +2,10 @@ window.addEventListener('load', function() {
 
   var authBtn = $('.btn-auth');
   var authEngine = new Auth(authBtn, logged_in_stuff);
-  authBtn.each(function(){
-    $(this).on("click", function(){
+  authBtn.each(function(i){
+    $(this).on("click", function(i){
       console.log("it works!!!");
-      authEngine.handleAuthBtnClick();
+      authEngine.handleAuthBtnClick(i);
     })
   });
 
