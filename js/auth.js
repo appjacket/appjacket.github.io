@@ -45,8 +45,10 @@ class Auth {
     var _this = this;
     $(".btn-auth").each(function(){
       if (_this.isAuthenticated()){
+        console.log("Authenticated...");
         $(this).text("Logout");
       } else {
+        console.log("...Not authenticated...");
         $(this).text("Login");
       }
     });
