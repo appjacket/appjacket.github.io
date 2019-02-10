@@ -8,10 +8,19 @@
   overflow: auto;
   position: inherit;
   left: 0;
-  top: 10px;
+  top: 0px;
   z-index: 1000000;
 }
 
+.overloay {
+  min-height:60vh;
+  overflow: auto;
+  position: inherit;
+  left: 0;
+  top: 10px;
+  z-index: 1000001;
+
+}
 .workspace-panel {
   width: 15%;
   height: 100%;
