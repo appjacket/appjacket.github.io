@@ -2,7 +2,18 @@ window.addEventListener('load', function() {
 
   var authBtn = $('.btn-auth');
   var authEngine = new Auth(authBtn, logged_in_stuff);
-  
+  authBtn.each(function(){
+    $(this).on("click", function(){
+      console.log("it works!!!");
+      if($(this).text == "Login"){
+        authEngine.webAuth.authorize();
+      }else {
+       authEngine.logout(); 
+        $("nav-link-width.nav-link.btn-auth").css("border-bottom", "0em");
+        $(".overlay").remove();
+      }
+    })
+  });
   authBtn.addEventListener('click', function(e) {
     e.preventDefault();
     if(authBtn.text == "Login"){
