@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
   var authBtn = $('.btn-auth');
   var authEngine = new Auth(authBtn, logged_in_stuff);
   authBtn.each(function(i,v){
-    $(this).on("click", function(i){
+    $(this).on("click", function(){
       console.log("it works!!!");
       authEngine.handleAuthBtnClick(i);
     })
