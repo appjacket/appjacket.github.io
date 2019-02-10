@@ -14,8 +14,10 @@
 .overlay {
   overflow: auto;
   position: inherit;
+  /*
   left: 0;
   top: 10px;
+  */
   z-index: 1000001;
   background: #fff;
 }
