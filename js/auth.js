@@ -30,12 +30,13 @@ class Auth {
     console.log("inside handleAuthentication");
     var _this;
     if (__this !== undefined) {
+      console.log("__this is undefined");
       _this = __this;
     }else {
       _this = this;
     }
 
-    this.webAuth.parseHash(function(err, authResult) {
+    _this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         _this.localLogin(authResult);
