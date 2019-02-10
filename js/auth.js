@@ -36,7 +36,7 @@ class Auth {
     //_this = __this;
     var running_this = this;
     
-    console.log("running_this..." + running_this.idToken);
+    console.log("__this..." + __this.idToken);
     running_this.parseHash(function(err, authResult) {
       console.log(JSON.stringify(authResult));
       if (authResult && authResult.accessToken && authResult.idToken) {
