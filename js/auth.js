@@ -28,8 +28,8 @@ class Auth {
     console.log(typeof this.webAuth);
   }
   
-  handleAuthentication(__this) {
-    console.log("inside handleAuthentication: " + __this);
+  handleAuthentication(__this, i) {
+    console.log("inside handleAuthentication: " + i);
     
     var _this;
     if (typeof __this !== undefined) {
