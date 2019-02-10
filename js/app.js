@@ -29,10 +29,7 @@ window.addEventListener('load', function() {
   $(window).resize(function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
-        var container_width = $('.workspace').width(); 
-        var container_height = $('.workspace').height();
-        $(".workspace-dims").width = container_width;
-        $(".workspace-dims").height = container_height;
+        display_workspace();
       }, 200);
     });
   
@@ -42,6 +39,10 @@ function logged_in_stuff(profile){
   display_workspace();
 }
 function display_workspace(){
+  var container_width = $('.workspace').width(); 
+        var container_height = $('.workspace').height();
+        $(".workspace-dims").width = container_width;
+        $(".workspace-dims").height = container_height;
 /*
   $("#overlay").css('background-color',"#fff").css({
     position: "absolute",
