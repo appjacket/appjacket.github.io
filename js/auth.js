@@ -30,7 +30,7 @@ class Auth {
     console.log("inside handleAuthentication");
     var _this;
     if (__this !== undefined) {
-      console.log("__this is undefined");
+      console.log("__this is NOT undefined");
       _this = __this;
     }else {
       _this = this;
@@ -50,6 +50,8 @@ class Auth {
         alert(
           'Error: ' + err.error + '. Check the console for further details.'
         );
+      } else {
+        alert("Weird...very weird.");
       }
       //_this.displayButtons();
     });
