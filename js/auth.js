@@ -50,7 +50,7 @@ class Auth {
       } else {
         console.log("...Not authenticated...");
         $(this).text("Login");
-        _this.handle_pageload()
+        _this.handleAuthentication()
       }
     });
   }
