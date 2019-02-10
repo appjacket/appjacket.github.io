@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
   authBtn.each(function(){
     $(this).on("click", function(){
       console.log("it works!!!");
-      if($(this).text == "Login"){
+      if($('.btn-auth')[0].text == "Login"){
         authEngine.webAuth.authorize();
       }else {
        authEngine.logout(); 
