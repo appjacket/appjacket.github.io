@@ -20,7 +20,7 @@ class Auth {
           domain: 'prod-appjacket.auth0.com',
           clientID: 'tsvYvSnQxlcJFHFTo_Ebf1o2ZF-nk67M',
           responseType: 'token id_token',
-          scope: 'openid',
+          scope: 'openid profile',
           redirectUri: window.location.href
         }); 
     }
