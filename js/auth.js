@@ -36,6 +36,7 @@ class Auth {
       _this = this;
     }
 
+    console.log(JSON.stringify(_this.webAuth));
     console.log(JSON.stringify(this.webAuth));
     
     this.webAuth.parseHash(function(err, authResult) {
