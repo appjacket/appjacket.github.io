@@ -31,8 +31,8 @@ window.addEventListener('load', function() {
       resizeTimer = setTimeout(function() {
         var container_width = $('.workspace').width(); 
         var container_height = $('.workspace').height();
-        $(".overlay").width = container_width;
-        $(".overlay").height = container_height;
+        $(".workspace-dims").width = container_width;
+        $(".workspace-dims").height = container_height;
       }, 200);
     });
   
@@ -42,6 +42,7 @@ function logged_in_stuff(profile){
   display_workspace();
 }
 function display_workspace(){
+/*
   $("#overlay").css('background-color',"#fff").css({
     position: "absolute",
     width: $(".workspace").width(),
@@ -57,5 +58,5 @@ $("<div/>").css("width","15%")
   .css("border-right-style","solid")
   .css("border-right-width","thin")
   .appendTo($("#overlay"));
-  
+*/  
 }
