@@ -29,7 +29,7 @@ class Auth {
   }
   
   handleAuthentication(__this) {
-    console.log("inside handleAuthentication: " + i);
+    console.log("inside handleAuthentication: " + __this);
     
     var _this;
     if (typeof __this !== undefined) {
