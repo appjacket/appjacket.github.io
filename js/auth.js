@@ -84,7 +84,7 @@ class Auth {
       console.log("...Not authenticated...");
       $(".btn-auth").each(function(i,v){
         $(v).text("Login");
-      }
+      });
       _this.handleAuthentication(_this, i);
     }
   }
