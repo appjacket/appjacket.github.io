@@ -12,14 +12,14 @@
   z-index: 1000000;
 }
 
-.overloay {
+.overlay {
   min-height:60vh;
   overflow: auto;
   position: inherit;
   left: 0;
   top: 10px;
   z-index: 1000001;
-
+  background: #fff;
 }
 .workspace-panel {
   width: 15%;
