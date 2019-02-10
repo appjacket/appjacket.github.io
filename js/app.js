@@ -14,16 +14,6 @@ window.addEventListener('load', function() {
       }
     })
   });
-  authBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    if(authBtn.text == "Login"){
-      authEngine.webAuth.authorize();
-    }else {
-     authEngine.logout(); 
-      $("#btn-auth").css("border-bottom", "0em");
-      $(".overlay").remove();
-    }
-  });
 
   authEngine.handle_pageload();
   var btn_active = $("a.nav-link-width.nav-link.active");
