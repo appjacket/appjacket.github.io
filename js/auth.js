@@ -60,8 +60,6 @@ class Auth {
         alert(
           'Error: ' + err.error + '. Check the console for further details.'
         );
-      } else {
-        alert("Weird...very weird.");
       }
       //_this.displayButtons();
     });
