@@ -30,6 +30,7 @@ class Auth {
   
   handleAuthentication(__this) {
     console.log("inside handleAuthentication");
+    
     var _this;
     if (typeof __this !== undefined) {
       console.log("__this is NOT undefined");
@@ -47,10 +48,13 @@ class Auth {
       running_this = _this.webAuth;
       console.log("_this.webAuth");
     }
+    
+    console.log("running_this..." + running_this.idToken);
     running_this.parseHash(function(err, authResult) {
       console.log(JSON.stringify(authResult));
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
+        console.log("_this.idToken" + _this.idToken);
         _this.localLogin(authResult);
         if (_this.isAuthenticated()){
          console.log("inside handleAuthentication, we're now authorized"); 
