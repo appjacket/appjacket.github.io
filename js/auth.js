@@ -42,13 +42,14 @@ class Auth {
     });
   }
   handleAuthBtnClick() {
-    if (this.isAuthenticated()){
-      $(".btn-auth").each(function(){
+    var _this = this;
+    $(".btn-auth").each(function(){
+      if (_this.isAuthenticated()){
         $(this).text("Logout");
-      });
-    } else {
-      $(this).text("Login");
-    }
+      } else {
+        $(this).text("Login");
+      }
+    });
   }
   displayButtons(){
     if (this.isAuthenticated()) {
