@@ -40,6 +40,7 @@ class Auth {
     if(typeof this.webAuth !== undefined) {
       running_this = this.webAuth;
       console.log("this.webAuth");
+      console.log(typeof this.webAuth);
     } else {
       running_this = _this.webAuth;
       console.log("_this.webAuth");
