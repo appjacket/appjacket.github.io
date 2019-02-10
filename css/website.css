@@ -6,7 +6,7 @@
 .workspace {
   min-height:60vh;
   overflow: auto;
-  position: absolute;
+  position: inherit;
   left: 0;
   top: 10px;
   z-index: 1000000;
