@@ -39,7 +39,7 @@ class Auth {
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-      _this.displayButtons();
+      //_this.displayButtons();
     });
   }
   handleAuthBtnClick() {
@@ -56,11 +56,14 @@ class Auth {
     });
   }
   displayButtons(){
+    /*
     if (this.isAuthenticated()) {
       console.log("is authenticated");
       this.getProfile();
       this.login_function(this.userProfile);
     }
+    */
+    console.log("display buttons is not implemented...");
   }
   
   getProfile() {
