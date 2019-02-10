@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
         authEngine.webAuth.authorize();
       }else {
        authEngine.logout(); 
-        $("nav-link-width.nav-link.btn-auth").css("border-bottom", "0em");
+        $(".nav-link-width.nav-link.btn-auth").css("border-bottom", "0em");
         $(".overlay").remove();
       }
     })
@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
   authEngine.handle_pageload();
   var btn_active = $("a.nav-link-width.nav-link.active");
   var old_btn_active_settings = $(btn_active).css("border-bottom");
-  $("#btn-auth").hover(
+  $(".nav-link-width.nav-link.btn-auth").hover(
     function(e){ $("a.nav-link-width.nav-link.active").css("border-bottom", "0em");}, 
     function(){$(btn_active).css("border-bottom",old_btn_active_settings);}
   );
