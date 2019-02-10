@@ -36,7 +36,13 @@ class Auth {
       _this = this;
     }
 
-    this.webAuth.parseHash(function(err, authResult) {
+    var running_this;
+    if(typeof this.webAuth !== undefined) {
+      running_this = this.webAuth;
+    } else {
+      running_this = _this.webAuth;
+    }
+    running_this.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         _this.localLogin(authResult);
