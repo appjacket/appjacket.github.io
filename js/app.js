@@ -40,9 +40,10 @@ function logged_in_stuff(profile){
 }
 function display_workspace(){
   var container_width = $('.workspace').width(); 
-        var container_height = $('.workspace').height();
-        $(".workspace-dims").width = container_width;
-        $(".workspace-dims").height = container_height;
+  var container_height = $('.workspace').height();
+  $(".workspace-dims").width = container_width;
+  $(".workspace-dims").height = container_height;
+  $('.overlay').css("display","inline");
 /*
   $("#overlay").css('background-color',"#fff").css({
     position: "absolute",
