@@ -38,7 +38,9 @@ class Auth {
     }else {
       _this = this;
     }
-
+    
+    _this = this;
+    console.log("_this.idToken" + _this.idToken);
     var running_this;
     if(typeof this.webAuth !== undefined) {
       running_this = this.webAuth;
