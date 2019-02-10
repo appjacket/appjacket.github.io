@@ -45,6 +45,7 @@ class Auth {
       console.log("_this.webAuth");
     }
     running_this.parseHash(function(err, authResult) {
+      console.log(JSON.stringify(authResult));
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         _this.localLogin(authResult);
