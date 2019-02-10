@@ -35,6 +35,8 @@ class Auth {
         _this.localLogin(authResult);
         if (_this.isAuthenticated()){
          console.log("inside handleAuthentication, we're now authorized"); 
+        } else {
+         console.log("inside handleAuthentication, we're still NOT authorized..."); 
         }
       } else if (err) {
         console.log(err);
