@@ -29,7 +29,7 @@ class Auth {
   }
   
   handleAuthentication(__this) {
-    console.log("inside handleAuthentication");
+    console.log("inside handleAuthentication: " + i);
     
     var _this;
     if (typeof __this !== undefined) {
@@ -75,16 +75,18 @@ class Auth {
   handleAuthBtnClick(i) {
     console.log("authButton Clicked" + i);
     var _this = this;
-    $(".btn-auth").each(function(){
-      if (_this.isAuthenticated()){
+    if (_this.isAuthenticated()){
         console.log("Authenticated...");
-        $(this).text("Logout");
-      } else {
-        console.log("...Not authenticated...");
-        $(this).text("Login");
-        _this.handleAuthentication(_this);
+        $(".btn-auth").each(function(i,v){
+          $(v).text("Logout");
+        });
+    } else {
+      console.log("...Not authenticated...");
+      $(".btn-auth").each(function(i,v){
+        $(v).text("Login");
       }
-    });
+      _this.handleAuthentication(_this, i);
+    }
   }
   displayButtons(){
     /*
