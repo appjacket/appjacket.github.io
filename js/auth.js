@@ -26,9 +26,15 @@ class Auth {
     }
   }
   
-  handleAuthentication() {
+  handleAuthentication(__this) {
     console.log("inside handleAuthentication");
-    var _this = this;
+    var _this;
+    if (__this !== undefined) {
+      _this = __this;
+    }else {
+      _this = this;
+    }
+
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
@@ -56,7 +62,7 @@ class Auth {
       } else {
         console.log("...Not authenticated...");
         $(this).text("Login");
-        _this.handleAuthentication()
+        _this.handleAuthentication(_this);
       }
     });
   }
