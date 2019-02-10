@@ -29,16 +29,13 @@ class Auth {
   handleAuthentication(__this) {
     console.log("inside handleAuthentication");
     var _this;
-    if (__this !== undefined) {
+    if (typeof __this !== undefined) {
       console.log("__this is NOT undefined");
       _this = __this;
     }else {
       _this = this;
     }
 
-    console.log(JSON.stringify(_this.webAuth));
-    console.log(JSON.stringify(this.webAuth));
-    
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
