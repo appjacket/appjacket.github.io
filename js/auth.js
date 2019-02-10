@@ -72,7 +72,8 @@ class Auth {
       //_this.displayButtons();
     });
   }
-  handleAuthBtnClick() {
+  handleAuthBtnClick(i) {
+    console.log(i);
     var _this = this;
     $(".btn-auth").each(function(){
       if (_this.isAuthenticated()){
