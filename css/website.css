@@ -1,4 +1,21 @@
+.workspace-dims {
+  width: ;
+  height: ;
+}
+
 .workspace {
   min-height:60vh;
   overflow: auto;
+  position: "absolute";
+  left: 0;
+  top: 10;
+  zIndex: 1000000;
+}
+
+.workspace-panel {
+  width: 15%;
+  height: 100%;
+  border-right: #000;
+  border-right-style: solid;
+  border-right-width: thin;
 }
