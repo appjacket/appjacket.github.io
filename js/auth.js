@@ -1,6 +1,6 @@
 class Auth {
   constructor(login_function) {
-    this.idToken;
+    this.idToken = login_function;
     this.accessToken;
     this.expiresAt;
     this.webAuth;
