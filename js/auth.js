@@ -36,7 +36,7 @@ class Auth {
       _this = this;
     }
 
-    _this.webAuth.parseHash(function(err, authResult) {
+    this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         _this.localLogin(authResult);
