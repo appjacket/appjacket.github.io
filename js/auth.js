@@ -39,8 +39,10 @@ class Auth {
     var running_this;
     if(typeof this.webAuth !== undefined) {
       running_this = this.webAuth;
+      console.log("this.webAuth");
     } else {
       running_this = _this.webAuth;
+      console.log("_this.webAuth");
     }
     running_this.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
