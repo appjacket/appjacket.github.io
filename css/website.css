@@ -6,10 +6,10 @@
 .workspace {
   min-height:60vh;
   overflow: auto;
-  position: "absolute";
+  position: absolute;
   left: 0;
-  top: 10;
-  zIndex: 1000000;
+  top: 10px;
+  z-index: 1000000;
 }
 
 .workspace-panel {
