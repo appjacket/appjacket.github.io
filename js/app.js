@@ -5,13 +5,7 @@ window.addEventListener('load', function() {
   authBtn.each(function(){
     $(this).on("click", function(){
       console.log("it works!!!");
-      if($('.btn-auth')[0].text == "Login"){
-        authEngine.webAuth.authorize();
-      }else {
-       authEngine.logout(); 
-        $(".nav-link-width.nav-link.btn-auth").css("border-bottom", "0em");
-        $(".overlay").remove();
-      }
+      authEngine.handleAuthBtnClick();
     })
   });
 
