@@ -32,24 +32,9 @@ class Auth {
     console.log("inside handleAuthentication: " + i);
     
     var _this;
-    if (typeof __this !== undefined) {
-      console.log("__this is NOT undefined");
-      _this = __this;
-    }else {
-      _this = this;
-    }
-    console.log("this.idToken: " + this.idToken);    
-    _this = this;
-    console.log("_this.idToken: " + _this.idToken);
-    var running_this;
-    if(typeof this.webAuth !== undefined) {
-      running_this = this.webAuth;
-      console.log("this.webAuth");
-      console.log(typeof this.webAuth);
-    } else {
-      running_this = _this.webAuth;
-      console.log("_this.webAuth");
-    }
+    
+    //_this = __this;
+    var running_this = this;
     
     console.log("running_this..." + running_this.idToken);
     running_this.parseHash(function(err, authResult) {
