@@ -39,26 +39,9 @@ function logged_in_stuff(profile){
   display_workspace();
 }
 function display_workspace(){
-  var container_width = $('.workspace').width(); 
-  var container_height = $('.workspace').height();
-  $(".workspace-dims").width = container_width;
-  $(".workspace-dims").height = container_height;
+  $(".workspace-dims").width = $('.workspace').width();
+  $(".workspace-dims").height = $('.workspace').height();
+  $(".workspace-dims").top = $('.workspace').top();
+  $(".workspace-dims").left = $('.workspace').left();
   $('.overlay').css("display","inline");
-/*
-  $("#overlay").css('background-color',"#fff").css({
-    position: "absolute",
-    width: $(".workspace").width(),
-    height: $(".workspace").height(),
-    left: 0,
-    top: 10,
-    zIndex: 1000000  // to be on the safe side
-  }).appendTo($(".workspace").css("position", "relative"));
-  
-$("<div/>").css("width","15%")
-  .css("height","100%")
-  .css("border-right","#000")
-  .css("border-right-style","solid")
-  .css("border-right-width","thin")
-  .appendTo($("#overlay"));
-*/  
 }
