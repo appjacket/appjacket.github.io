@@ -42,7 +42,15 @@ class Auth {
       _this.displayButtons();
     });
   }
-  
+  handleAuthBtnClick() {
+    if (this.isAuthenticated()){
+      $(".btn-auth").each(function(){
+        $(this).text("Logout");
+      });
+    } else {
+      $(this).text("Login");
+    }
+  }
   displayButtons(){
     if (this.isAuthenticated()) {
       console.log("is authenticated");
