@@ -36,7 +36,7 @@ function logged_in_stuff(profile){
 function display_workspace(){
   $(".workspace-dims").width = $('.workspace').width();
   $(".workspace-dims").height = $('.workspace').height();
-  $(".workspace-dims").top = $('.workspace').top();
-  $(".workspace-dims").left = $('.workspace').left();
+  $(".workspace-dims").css("top", $('.workspace').offset().top + "px");
+  $(".workspace-dims").css("left", $('.workspace').offset().left + "px");
   $('.overlay').css("display","inline");
 }
