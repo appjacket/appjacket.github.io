@@ -33,6 +33,9 @@ class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         _this.localLogin(authResult);
+        if (_this.isAuthenticated()){
+         console.log("inside handleAuthentication, we're now authorized"); 
+        }
       } else if (err) {
         console.log(err);
         alert(
