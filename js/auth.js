@@ -27,6 +27,7 @@ class Auth {
   }
   
   handleAuthentication() {
+    console.log("inside handleAuthentication");
     var _this = this;
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
