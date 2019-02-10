@@ -73,7 +73,7 @@ class Auth {
     });
   }
   handleAuthBtnClick(i) {
-    console.log(i);
+    console.log("authButton Clicked" + i);
     var _this = this;
     $(".btn-auth").each(function(){
       if (_this.isAuthenticated()){
