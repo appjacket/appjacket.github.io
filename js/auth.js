@@ -54,7 +54,7 @@ class Auth {
   handleAuthBtnClick(i) {
     console.log("authButton Clicked: " + i);
     //var _this = this;
-    console.log(JSON.stringify(this));
+    console.log(JSON.stringify(this.webAuth.domain));
     if (this.isAuthenticated()){
         console.log("Authenticated...");
         this.logout();
