@@ -72,9 +72,8 @@ class Auth {
     if (this.isAuthenticated()) {
       console.log("is authenticated");
       this.getProfile();
-      this.login_function(this.userProfile);
     }
-    
+    this.login_function(this.userProfile);
     //console.log("display buttons is not implemented...");
   }
   
