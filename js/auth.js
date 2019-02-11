@@ -26,15 +26,14 @@ class Auth {
         }); 
     }
     
-        console.log(JSON.stringify(this.flag));
-
+    console.log(JSON.stringify(this.flag));
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
   }
   
   handleAuthentication(i) {
     console.log("inside handleAuthentication: " + i);
-            console.log(JSON.stringify(this.flag));
+    console.log(JSON.stringify(this.flag));
 
     this.webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
