@@ -8,8 +8,10 @@ window.addEventListener('load', function() {
       authEngine.handleAuthBtnClick(i);
       if(authEngine.isAuthenticated()){
         $(this).text("Logout");
+        console.log("authEngine.isAuthenticated()");
       } else {
         $(this).text("Login");
+        console.log("NOT! authEngine.isAuthenticated()");
       }
     })
   });
