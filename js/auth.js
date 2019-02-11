@@ -28,13 +28,8 @@ class Auth {
     console.log(typeof this.webAuth);
   }
   
-  handleAuthentication(__this, i) {
+  handleAuthentication(i) {
     console.log("inside handleAuthentication: " + i);
-    
-    var _this;
-    
-    //_this = __this;
-    var running_this = this;
     
     this.webAuth.parseHash(function(err, authResult) {
       console.log("authResult: " + JSON.stringify(authResult));
@@ -58,18 +53,18 @@ class Auth {
   }
   handleAuthBtnClick(i) {
     console.log("authButton Clicked" + i);
-    var _this = this;
-    if (_this.isAuthenticated()){
+    //var _this = this;
+    if (this.isAuthenticated()){
         console.log("Authenticated...");
         $(".btn-auth").each(function(i,v){
           $(v).text("Logout");
         });
     } else {
-      console.log("...Not authenticated...");
-      $(".btn-auth").each(function(i,v){
-        $(v).text("Login");
-      });
-      _this.handleAuthentication(_this, i);
+    //  console.log("...Not authenticated...");
+    //  $(".btn-auth").each(function(i,v){
+    //    $(v).text("Login");
+    //  });
+      this.handleAuthentication(i);
     }
   }
   displayButtons(){
