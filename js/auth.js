@@ -37,8 +37,6 @@ class Auth {
             console.log(JSON.stringify(this.flag));
 
     this.webAuth.parseHash(function(err, authResult) {
-      console.log("authResult: " + JSON.stringify(authResult));
-      console.log("authResult: " + JSON.stringify(authResult.accessToken));
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         console.log("_this.idToken" + _this.idToken);
@@ -54,8 +52,8 @@ class Auth {
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-      //_this.displayButtons();
     });
+    this.displayButtons();
   }
   handleAuthBtnClick(i) {
     console.log("authButton Clicked: " + i);
@@ -70,14 +68,14 @@ class Auth {
     }
   }
   displayButtons(){
-    /*
+    
     if (this.isAuthenticated()) {
       console.log("is authenticated");
       this.getProfile();
       this.login_function(this.userProfile);
     }
-    */
-    console.log("display buttons is not implemented...");
+    
+    //console.log("display buttons is not implemented...");
   }
   
   getProfile() {
