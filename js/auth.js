@@ -27,7 +27,7 @@ class Auth {
     }
     
         console.log(JSON.stringify(this.flag));
-
+    this.webAuth.logout();
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
   }
