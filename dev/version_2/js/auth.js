@@ -61,16 +61,25 @@ class Auth {
   }
   handleAuthBtnClick(i) {
     console.log("authButton Clicked: " + i);
-    //var _this = this;
-        console.log(JSON.stringify(this.flag));
+    console.log("flag is: " + this.flag);  
+    
     if (this.isAuthenticated()){
         console.log("Authenticated...");
+        $('.btn-auth').each(function(i,v){
+            $(v).text("Logout");
+            console.log("authEngine.isAuthenticated()");
+        });
         this.logout();
     } else {
-    console.log("...Not authenticated...");
+      console.log("...Not authenticated...");
+      $('.btn-auth').each(function(i,v){
+        $(v).text("12345");
+          console.log("authEngine.isAuthenticated()");
+      });
       this.handle_pageload();
     }
   }
+  
   displayButtons(){
     
     if (this.isAuthenticated()) {
