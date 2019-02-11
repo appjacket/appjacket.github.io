@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
       console.log("it works!!!");
       authEngine.handleAuthBtnClick(i);
       if(authEngine.isAuthenticated()){
-        $(this).text("Logout");
+        $(this).text("12345");
         console.log("authEngine.isAuthenticated()");
       } else {
         $(this).text("Login");
