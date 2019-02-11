@@ -146,6 +146,7 @@ class Auth {
     if (localStorage.getItem('isLoggedIn') === 'true') {
      this.renewTokens();
     } else {
+      console.log("handle_pageload()");
       this.handleAuthentication(1);
     }
   }
