@@ -1,5 +1,5 @@
 var authBtn = $('.btn-auth');
-var authEngine = new Auth(authBtn, logged_in_stuff);
+var authEngine = new Auth(logged_in_stuff, "init-dt");
 
 window.addEventListener('load', function() {
   authBtn.each(function(i,v){
