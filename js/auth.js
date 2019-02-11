@@ -10,13 +10,15 @@ class Auth {
     
     if (window.location.href.indexOf("dev") != -1){
       console.log("inside of dev environment");
+       console.log(typeof this.webAuth);
         this.webAuth = new auth0.WebAuth({
           domain: 'dev-jobs.auth0.com',
           clientID: 'Zx2LiW55N9O1YqIE49Q70LV2eDEXpIl1',
           responseType: 'token id_token',
           scope: 'openid profile',
           redirectUri: window.location.href
-       });
+         });
+             console.log(typeof this.webAuth);
     }else{
             console.log("inside of PROD environment");
         this.webAuth = new auth0.WebAuth({
