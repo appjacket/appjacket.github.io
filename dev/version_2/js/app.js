@@ -6,6 +6,7 @@ window.addEventListener('load', function() {
     $(v).on("click", function(){
       console.log("it works!!!");
       authEngine.handleAuthBtnClick(i);
+      /*
       if(authEngine.isAuthenticated()){
         $(v).text("12345");
         console.log("authEngine.isAuthenticated()");
@@ -13,6 +14,7 @@ window.addEventListener('load', function() {
         $(v).text("Login");
         console.log("NOT! authEngine.isAuthenticated()");
       }
+      */
     })
   });
   
