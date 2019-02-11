@@ -30,8 +30,8 @@ window.addEventListener('load', function() {
   
 });
 function logged_in_stuff(profile){
-  console.log(JSON.stringify(profile));
   display_workspace();
+  console.log(JSON.stringify(profile));
 }
 function display_workspace(){
   $(".workspace-dims").width = $('.workspace').width();
