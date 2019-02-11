@@ -6,10 +6,15 @@ window.addEventListener('load', function() {
     $(this).on("click", function(){
       console.log("it works!!!");
       authEngine.handleAuthBtnClick(i);
+      if(authEngine.isAuthorized()){
+        $(this).text("Logout");
+      } else {
+        $(this).text("Login");
+      }
     })
   });
-
-  authEngine.handle_pageload();
+  
+ // authEngine.handle_pageload();
   var btn_active = $("a.nav-link-width.nav-link.active");
   var old_btn_active_settings = $(btn_active).css("border-bottom");
   $(".nav-link-width.nav-link.btn-auth").hover(
