@@ -14,7 +14,8 @@ class Auth {
           responseType: 'token id_token',
           scope: 'openid profile',
           redirectUri: window.location.href
-       }).hashPrefix('');
+       });
+        this.webAuth.hashPrefix('');
     }else{
         this.webAuth = new auth0.WebAuth({
           domain: 'prod-appjacket.auth0.com',
