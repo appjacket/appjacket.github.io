@@ -29,7 +29,13 @@ class Auth {
           redirectUri: window.location.href
         }); 
     }
-    
+    this.webAuth = new auth0.WebAuth({
+          domain: 'dev-jobs.auth0.com',
+          clientID: 'Zx2LiW55N9O1YqIE49Q70LV2eDEXpIl1',
+          responseType: 'token id_token',
+          scope: 'openid profile',
+          redirectUri: window.location.href
+         });
     console.log(JSON.stringify(this.flag));
     console.log(this.isAuthenticated());
     console.log("typeof this.webAuth");
