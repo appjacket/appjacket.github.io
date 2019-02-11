@@ -31,9 +31,7 @@ class Auth {
     console.log(JSON.stringify(this.flag));
     console.log(this.isAuthenticated());
     console.log("typeof this.webAuth");
-    console.log(typeof this.webAuth);
-    this.handle_pageload();
-   
+    console.log(typeof this.webAuth);   
   }
   
   handleAuthentication(i) {
@@ -68,7 +66,7 @@ class Auth {
         this.logout();
     } else {
     console.log("...Not authenticated...");
-      this.handleAuthentication(i);
+      this.handle_pageload();
     }
   }
   displayButtons(){
