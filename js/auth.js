@@ -9,6 +9,7 @@ class Auth {
     this.flag = flag;
     
     if (window.location.href.indexOf("dev") != -1){
+      console.log("inside of dev environment");
         this.webAuth = new auth0.WebAuth({
           domain: 'dev-jobs.auth0.com',
           clientID: 'Zx2LiW55N9O1YqIE49Q70LV2eDEXpIl1',
@@ -17,6 +18,7 @@ class Auth {
           redirectUri: window.location.href
        });
     }else{
+            console.log("inside of PROD environment");
         this.webAuth = new auth0.WebAuth({
           domain: 'prod-appjacket.auth0.com',
           clientID: 'tsvYvSnQxlcJFHFTo_Ebf1o2ZF-nk67M',
