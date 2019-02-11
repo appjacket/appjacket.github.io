@@ -52,18 +52,16 @@ class Auth {
     });
   }
   handleAuthBtnClick(i) {
-    console.log("authButton Clicked" + i);
+    console.log("authButton Clicked: " + i);
     //var _this = this;
     if (this.isAuthenticated()){
         console.log("Authenticated...");
+        this.logout();
         $(".btn-auth").each(function(i,v){
-          $(v).text("Logout");
+          $(v).text("Login");
         });
     } else {
-    //  console.log("...Not authenticated...");
-    //  $(".btn-auth").each(function(i,v){
-    //    $(v).text("Login");
-    //  });
+    console.log("...Not authenticated...");
       this.handleAuthentication(i);
     }
   }
