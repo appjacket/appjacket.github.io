@@ -15,7 +15,6 @@ class Auth {
           scope: 'openid profile',
           redirectUri: window.location.href
        });
-        this.webAuth.hashPrefix('');
     }else{
         this.webAuth = new auth0.WebAuth({
           domain: 'prod-appjacket.auth0.com',
