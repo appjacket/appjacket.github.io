@@ -24,6 +24,9 @@ class Auth {
           redirectUri: window.location.href
         }); 
     }
+    
+        console.log(JSON.stringify(this.webAuth.domain));
+
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
   }
