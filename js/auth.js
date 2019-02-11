@@ -1,11 +1,12 @@
 class Auth {
-  constructor(login_function) {
+  constructor(login_function, flag) {
     this.idToken;
     this.accessToken;
     this.expiresAt;
     this.webAuth;
     this.userProfile;
     this.login_function = login_function;
+    this.flag = flag;
     
     if (window.location.href.indexOf("dev") != -1){
         this.webAuth = new auth0.WebAuth({
@@ -25,7 +26,7 @@ class Auth {
         }); 
     }
     
-        console.log(JSON.stringify(this.webAuth.domain));
+        console.log(JSON.stringify(this.flag));
 
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
