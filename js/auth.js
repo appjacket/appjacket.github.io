@@ -1,6 +1,6 @@
 class Auth {
   constructor(login_function) {
-    this.idToken = login_function;
+    this.idToken;
     this.accessToken;
     this.expiresAt;
     this.webAuth;
@@ -11,10 +11,10 @@ class Auth {
         this.webAuth = new auth0.WebAuth({
           domain: 'dev-jobs.auth0.com',
           clientID: 'Zx2LiW55N9O1YqIE49Q70LV2eDEXpIl1',
-         responseType: 'token id_token',
-         scope: 'openid profile',
-         redirectUri: window.location.href
-       });
+          responseType: 'token id_token',
+          scope: 'openid profile',
+          redirectUri: window.location.href
+       }).hashPrefix('');
     }else{
         this.webAuth = new auth0.WebAuth({
           domain: 'prod-appjacket.auth0.com',
@@ -36,7 +36,6 @@ class Auth {
     //_this = __this;
     var running_this = this;
     
-    console.log("this..." + this.idToken);
     this.webAuth.parseHash(function(err, authResult) {
       console.log("authResult: " + JSON.stringify(authResult));
       if (authResult && authResult.accessToken && authResult.idToken) {
