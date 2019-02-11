@@ -31,7 +31,7 @@ class Auth {
   handleAuthentication(i) {
     console.log("inside handleAuthentication: " + i);
     
-    webAuth.parseHash(function(err, authResult) {
+    this.webAuth.parseHash(function(err, authResult) {
       console.log("authResult: " + JSON.stringify(authResult));
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
@@ -54,12 +54,10 @@ class Auth {
   handleAuthBtnClick(i) {
     console.log("authButton Clicked: " + i);
     //var _this = this;
+    console.log(JSON.stringify(this));
     if (this.isAuthenticated()){
         console.log("Authenticated...");
         this.logout();
-        $(".btn-auth").each(function(i,v){
-          $(v).text("Login");
-        });
     } else {
     console.log("...Not authenticated...");
       this.handleAuthentication(i);
