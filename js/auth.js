@@ -32,7 +32,8 @@ class Auth {
     console.log(this.isAuthenticated());
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
-    this.handleAuthentication(0);
+    this.handle_pageload();
+   
   }
   
   handleAuthentication(i) {
