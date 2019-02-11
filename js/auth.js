@@ -141,7 +141,7 @@ class Auth {
     if (localStorage.getItem('isLoggedIn') === 'true') {
      this.renewTokens();
     } else {
-      this.handleAuthentication();
+      this.handleAuthentication(1);
     }
   }
 
