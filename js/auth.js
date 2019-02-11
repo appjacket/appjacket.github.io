@@ -29,7 +29,7 @@ class Auth {
     }
     
     console.log(JSON.stringify(this.flag));
-    console.log(this.webAuth.isAuthorized());
+    console.log(this.webAuth.isAuthenticated());
     console.log("typeof this.webAuth");
     console.log(typeof this.webAuth);
   }
