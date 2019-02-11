@@ -2,15 +2,14 @@ var authEngine = new Auth(logged_in_stuff, "init-dt");
 
 window.addEventListener('load', function() {
   $('.authBtn').each(function(i,v){
-    _this = this;
-    $(this).on("click", function(){
+    $(v).on("click", function(){
       console.log("it works!!!");
       authEngine.handleAuthBtnClick(i);
       if(authEngine.isAuthenticated()){
-        $(_this).text("12345");
+        $(v).text("12345");
         console.log("authEngine.isAuthenticated()");
       } else {
-        $(_this).text("Login");
+        $(v).text("Login");
         console.log("NOT! authEngine.isAuthenticated()");
       }
     })
