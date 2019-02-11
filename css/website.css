@@ -4,7 +4,6 @@
 }
 
 .workspace {
-  display: none;
   overflow: auto;
   position: inherit;
   left: 0;
@@ -13,6 +12,7 @@
 }
 
 .overlay {
+  display: none;
   overflow: auto;
   position: inherit;
   /*
