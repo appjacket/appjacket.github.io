@@ -90,7 +90,7 @@ function start_countdown_timer(){
   
     // this is to ensure weeks and months are on the same row in small display port devices
     var wrapper_div = $("<div/>");
-    $example.append($wrapper_div);
+    $(example).append($(wrapper_div));
   
     labels.forEach(function(label, i) {
       if(label == "weeks" || label == "days"){
