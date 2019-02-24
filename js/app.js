@@ -14,13 +14,18 @@ if (window.requestIdleCallback) {
     requestIdleCallback(function () {
         Fingerprint2.get(function (components) {
           console.log(components) // an array of components: {key: ..., value: ...}
-        })
+        }).then(Fingerprint2.getV18((result) => {
+          console.log(result);
+        });
+      })
     })
 } else {
     setTimeout(function () {
         Fingerprint2.get(function (components) {
           console.log(components) // an array of components: {key: ..., value: ...}
-        })  
+        }).then(Fingerprint2.getV18((result) => {
+          console.log(result);
+        }); 
     }, 500)
 }
 function start_countdown_timer(){
