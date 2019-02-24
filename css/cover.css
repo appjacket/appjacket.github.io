@@ -8,7 +8,9 @@ a:focus,
 a:hover {
   color: #fff;
 }
-
+.canada-flag {
+ background:red; 
+}
 /* Custom default button */
 .btn-secondary {
   color: #000;
