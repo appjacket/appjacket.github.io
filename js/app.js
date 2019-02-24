@@ -87,12 +87,25 @@ function start_countdown_timer(){
     }
     // Build the layout
     var initData = strfobj(currDate);
+  
+    // this is to ensure weeks and months are on the same row in small display port devices
+    var wrapper_div = $("<div/>");
+    $example.append($wrapper_div);
+  
     labels.forEach(function(label, i) {
-      $example.append(template({
-        curr: initData[label],
-        next: initData[label],
-        label: label
-      }));
+      if(label == "weeks" || label == "months"){
+          $(wrapper_div).append(template({
+              curr: initData[label],
+              next: initData[label],
+              label: label
+          )};
+      } else{
+        $example.append(template({
+          curr: initData[label],
+          next: initData[label],
+          label: label
+        }));
+      }
     });
     // Starts the countdown
     $example.countdown(golive_date, function(event) {
