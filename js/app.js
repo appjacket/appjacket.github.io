@@ -2,11 +2,13 @@
 
 window.addEventListener('load', function() {
   start_countdown_timer();
+  
   $(".canada-flag").each(function(i,v){
    $(v).on("click", function(){
      window.location.href = "https://appjacket.ca"
    });
-  }
+  });
+  
   $('.btn-auth').each(function(i,v){
     console.log("got a button");
     $(v).on("click", function(){
