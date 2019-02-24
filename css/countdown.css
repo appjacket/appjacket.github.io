@@ -12,8 +12,8 @@
   text-align: center;
   position: relative;
   height: 95px;
-  width: 65px;
-
+  width: 100%;
+  
   -webkit-perspective: 479px;
   -moz-perspective: 479px;
   -ms-perspective: 479px;
