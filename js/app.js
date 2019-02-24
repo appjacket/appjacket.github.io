@@ -17,7 +17,7 @@ if (window.requestIdleCallback) {
         });
         Fingerprint2.getV18((result) => {
           console.log(result);
-        }));
+        });
     })
 } else {
     setTimeout(function () {
@@ -26,7 +26,7 @@ if (window.requestIdleCallback) {
         });
         Fingerprint2.getV18((result) => {
           console.log(result);
-        }));
+        });
     }, 500)
 }
 function start_countdown_timer(){
