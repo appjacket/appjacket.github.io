@@ -90,7 +90,7 @@ function start_countdown_timer(){
     $example.countdown(golive_date, function(event) {
       console.log(golive_date);
       console.log(event);
-      var newDate = event.strftime('%w3:%d:%H:%M:%S'),
+      var newDate = event.strftime('%w:%d:%H:%M:%S'),
         data;
       if (newDate !== nextDate) {
         currDate = nextDate;
