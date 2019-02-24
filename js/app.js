@@ -111,8 +111,8 @@ function start_countdown_timer(){
       }
     });
   
-    $(".weeks").css("margin-left", "3em");
-    $(".days").css("margin-right", "3em");
+    $(".weeks").css("margin-left", "1em");
+    $(".days").css("margin-right", "1em");
     // Starts the countdown
     $example.countdown(golive_date, function(event) {
       var newDate = event.strftime('%w:%d:%H:%M:%S'),
