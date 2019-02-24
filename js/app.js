@@ -93,8 +93,9 @@ function start_countdown_timer(){
   
     $(wrapper_div).addClass("d-flex p-4 mb-4 flex-row justify-content-between countdown-container");
     $(wrapper_div).css({"display": "flex",
-  "flex-direction": "column",
-  "flex-grow": "1"});
+  "flex-direction": "row",
+  "flex-grow": "1",
+  "justify-content":"space-around"});
     $example.append($(wrapper_div));
   
     labels.forEach(function(label, i) {
