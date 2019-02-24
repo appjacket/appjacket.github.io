@@ -90,7 +90,9 @@ function start_countdown_timer(){
   
     // this is to ensure weeks and months are on the same row in small display port devices
     var wrapper_div = $("<div/>");
-    $(wrapper_div).text("hello dave");
+  
+    $(wrapper_div).addClass("d-flex p-4 mb-4 flex-row justify-content-between flex-wrap countdown-container");
+  
     $example.append($(wrapper_div));
   
     labels.forEach(function(label, i) {
@@ -108,6 +110,9 @@ function start_countdown_timer(){
         }));
       }
     });
+  
+    $(".weeks").css("margin-left", "3em");
+    $(".days").css("margin-right", "3em");
     // Starts the countdown
     $example.countdown(golive_date, function(event) {
       var newDate = event.strftime('%w:%d:%H:%M:%S'),
