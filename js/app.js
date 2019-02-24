@@ -16,7 +16,7 @@ if (window.requestIdleCallback) {
           console.log(components) // an array of components: {key: ..., value: ...}
         }).then(Fingerprint2.getV18((result) => {
           console.log(result);
-        });
+        }));
     })
 } else {
     setTimeout(function () {
