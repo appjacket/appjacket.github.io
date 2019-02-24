@@ -98,7 +98,7 @@ function start_countdown_timer(){
               curr: initData[label],
               next: initData[label],
               label: label
-          )};
+          )});
       } else{
         $example.append(template({
           curr: initData[label],
