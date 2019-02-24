@@ -93,12 +93,12 @@ function start_countdown_timer(){
     $example.append($wrapper_div);
   
     labels.forEach(function(label, i) {
-      if(label == "weeks" || label == "months"){
+      if(label == "weeks" || label == "days"){
           $(wrapper_div).append(template({
               curr: initData[label],
               next: initData[label],
               label: label
-          )});
+          }));
       } else{
         $example.append(template({
           curr: initData[label],
