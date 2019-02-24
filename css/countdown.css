@@ -1,10 +1,10 @@
 .main-example {
   margin: 0 auto;
-  width: 100%;
+  width: 400px;
 }
 .main-example .countdown-container {
   height: 130px;
-  width: 400px;
+  width: 100%;
 }
 .main-example .time {
   border-radius: 5px;
