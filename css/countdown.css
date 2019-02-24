@@ -4,6 +4,7 @@
 }
 .main-example .countdown-container {
   height: 130px;
+  width: 100%;
 }
 .main-example .time {
   border-radius: 5px;
