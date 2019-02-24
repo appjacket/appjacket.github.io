@@ -91,7 +91,7 @@ function start_countdown_timer(){
     // this is to ensure weeks and months are on the same row in small display port devices
     var wrapper_div = $("<div/>");
   
-    $(wrapper_div).addClass("d-flex p-4 mb-4 flex-row justify-content-between countdown-container");
+    //$(wrapper_div).addClass("d-flex p-4 mb-4 flex-row justify-content-between countdown-container");
     $(wrapper_div).css({"display": "flex",
   "flex-direction": "row",
   "flex-grow": "1",
