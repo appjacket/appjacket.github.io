@@ -50,6 +50,7 @@ function display_workspace(){
 }
 
 function start_countdown_timer(){
+  console.log("OK...");
  var labels = ['weeks', 'days', 'hours', 'minutes', 'seconds'],
       golive_date = '2022/07/11',
       template = _.template($('#main-example-template').html()),
