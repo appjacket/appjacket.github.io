@@ -17,7 +17,7 @@ window.addEventListener('load', function() {
     })
   });
   
- authEngine.handle_pageload();
+ //authEngine.handle_pageload();
   var btn_active = $("a.nav-link-width.nav-link.active");
   var old_btn_active_settings = $(btn_active).css("border-bottom");
   $(".nav-link-width.nav-link.btn-auth").hover(
