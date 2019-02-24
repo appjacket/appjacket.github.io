@@ -50,7 +50,8 @@ function display_workspace(){
 }
 
 function start_countdown_timer(){
-  console.log("OK...");
+  //most of this function taken from here:
+  // http://hilios.github.io/jQuery.countdown/
  var labels = ['weeks', 'days', 'hours', 'minutes', 'seconds'],
       golive_date = new Date('2022/07/11'),
       template = _.template($('#main-example-template').html()),
@@ -88,8 +89,6 @@ function start_countdown_timer(){
     });
     // Starts the countdown
     $example.countdown(golive_date, function(event) {
-      console.log(golive_date);
-      console.log(event);
       var newDate = event.strftime('%w:%d:%H:%M:%S'),
         data;
       if (newDate !== nextDate) {
