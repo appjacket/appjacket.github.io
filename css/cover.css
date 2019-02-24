@@ -13,7 +13,7 @@ a:hover {
 }
 /* Custom default button */
 .btn-secondary {
-  color: #000;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: red;
   border: .05rem solid #fff;
