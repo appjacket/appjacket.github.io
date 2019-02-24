@@ -9,7 +9,8 @@ window.addEventListener('load', function() {
    });
   });
   
-}
+});
+
 function start_countdown_timer(){
   //most of this function taken from here:
   // http://hilios.github.io/jQuery.countdown/
