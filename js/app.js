@@ -90,21 +90,30 @@ function start_countdown_timer(){
   
     // this is to ensure weeks and months are on the same row in small display port devices
     var wrapper_div = $("<div/>");
+    var row_1 = $("<div/>");
+    var row_2 = $("<div/>");
   
-    //$(wrapper_div).addClass("d-flex p-4 mb-4 flex-row justify-content-between countdown-container");
-    $(wrapper_div).css({
-      "display": "flex","flex-direction": "row","flex-grow": "1","justify-content":"space-around", "width":"100%","margin":"2em"
-    });
+    $(wrapper_div).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
   
     $example.append($(wrapper_div));
   
     labels.forEach(function(label, i) {
-      if(label == "weeks" || label == "days"){
-          $(wrapper_div).append(template({
+      if(label == "weeks"){
+        $(row_1).append(template({
               curr: initData[label],
               next: initData[label],
               label: label
           }));
+        $(row_1).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+        $(wrapper_div).append($(row_1));
+      }else if(abel == "days"){
+        $(row_2).append(template({
+              curr: initData[label],
+              next: initData[label],
+              label: label
+          }));
+        $(row_2).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+        $(wrapper_div).append($(row_2));
       } else{
         $example.append(template({
           curr: initData[label],
