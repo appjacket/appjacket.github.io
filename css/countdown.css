@@ -1,6 +1,6 @@
 .main-example {
   margin: 0 auto;
-  width: 355px;
+  width: 100%;
 }
 .main-example .countdown-container {
   height: 130px;
@@ -12,7 +12,7 @@
   text-align: center;
   position: relative;
   height: 95px;
-  width: 100%;
+  width: 48px;
   
   -webkit-perspective: 479px;
   -moz-perspective: 479px;
