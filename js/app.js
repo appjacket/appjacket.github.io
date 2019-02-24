@@ -10,7 +10,19 @@ window.addEventListener('load', function() {
   });
   
 });
-
+if (window.requestIdleCallback) {
+    requestIdleCallback(function () {
+        Fingerprint2.get(function (components) {
+          console.log(components) // an array of components: {key: ..., value: ...}
+        })
+    })
+} else {
+    setTimeout(function () {
+        Fingerprint2.get(function (components) {
+          console.log(components) // an array of components: {key: ..., value: ...}
+        })  
+    }, 500)
+}
 function start_countdown_timer(){
   //most of this function taken from here:
   // http://hilios.github.io/jQuery.countdown/
