@@ -96,6 +96,10 @@ function start_countdown_timer(){
     $(wrapper_div).addClass("d-flex p-4 m-2 flex-column justify-content-between countdown-container");
     $(row_1).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
     $(row_2).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+
+    $(row_1).width("100%");
+    $(row_2).width("100%");
+  
     $(wrapper_div).append($(row_1));
     $(wrapper_div).append($(row_2));
     $example.append($(wrapper_div));
