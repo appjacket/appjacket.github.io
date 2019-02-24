@@ -94,28 +94,21 @@ function start_countdown_timer(){
     var row_2 = $("<div/>");
   
     $(wrapper_div).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
-  
+    $(row_1).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+    $(row_2).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+    $(wrapper_div).append($(row_1));
+    $(wrapper_div).append($(row_2));
     $example.append($(wrapper_div));
   
     labels.forEach(function(label, i) {
-      if(label == "weeks"){
+      if(label == "weeks" || label == "days"){
         $(row_1).append(template({
               curr: initData[label],
               next: initData[label],
               label: label
           }));
-        $(row_1).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
-        $(wrapper_div).append($(row_1));
-      }else if(abel == "days"){
-        $(row_2).append(template({
-              curr: initData[label],
-              next: initData[label],
-              label: label
-          }));
-        $(row_2).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
-        $(wrapper_div).append($(row_2));
       } else{
-        $example.append(template({
+        $(row_2).append(template({
           curr: initData[label],
           next: initData[label],
           label: label
