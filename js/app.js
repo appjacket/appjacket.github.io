@@ -93,7 +93,7 @@ function start_countdown_timer(){
     var row_1 = $("<div/>");
     var row_2 = $("<div/>");
   
-    $(wrapper_div).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
+    $(wrapper_div).addClass("d-flex p-4 m-2 flex-column justify-content-between countdown-container");
     $(row_1).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
     $(row_2).addClass("d-flex p-4 m-2 flex-row justify-content-between countdown-container");
     $(wrapper_div).append($(row_1));
