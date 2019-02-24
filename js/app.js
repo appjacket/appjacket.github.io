@@ -110,6 +110,5 @@ function start_countdown_timer(){
           }, 50, $node);
         });
       }
-    });
-  }); 
+    }); 
 }
