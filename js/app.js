@@ -1,6 +1,7 @@
 var authEngine = new Auth(logged_in_stuff, "init-dt");
 
 window.addEventListener('load', function() {
+  start_countdown_timer();
   $('.btn-auth').each(function(i,v){
     console.log("got a button");
     $(v).on("click", function(){
