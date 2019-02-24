@@ -1,4 +1,4 @@
-var authEngine = new Auth(logged_in_stuff, "init-dt");
+//var authEngine = new Auth(logged_in_stuff, "init-dt");
 
 window.addEventListener('load', function() {
   start_countdown_timer();
