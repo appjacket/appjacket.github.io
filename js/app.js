@@ -1,10 +1,7 @@
 //var authEngine = new Auth(logged_in_stuff, "init-dt");
 
 window.addEventListener('load', function() {
-  // redirect to appjacket.ca if in canada
-  $.get("https://appjacket.com/geo_check.json", function(){
-    window.location.replace("https://appjacket.ca");
-  });
+
   start_countdown_timer();
   
   $(".canada-flag").each(function(i,v){
