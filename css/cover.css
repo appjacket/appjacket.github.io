@@ -9,6 +9,7 @@ a:hover {
   color: #fff;
 }
 .canada-flag {
+  background-image: url(/images/Flag_of_Canada.png);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
