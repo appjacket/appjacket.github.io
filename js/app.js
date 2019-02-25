@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
   start_countdown_timer();
   
   $(".canada-flag").each(function(i,v){
-   $(v).height($(window).width() * .45);
+   $(v).height($(window).height() * .40);
    $(v).on("click", function(){
      window.location.href = "https://appjacket.ca"
    });
