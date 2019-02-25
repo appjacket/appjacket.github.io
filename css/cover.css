@@ -9,9 +9,11 @@ a:hover {
   color: #fff;
 }
 .canada-flag {
-  background-color:red; 
-  font-size: 1.25rem;
-  font-weight: 300;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  width:auto;
+  height:100%;
 }
 /* Custom default button */
 .btn-secondary {
