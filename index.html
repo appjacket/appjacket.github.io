@@ -6,7 +6,7 @@
     http_req.open("GET", req_url);
     http_req.send();
     http_req.onreadystatechange=(e)=>{
-      console.log(e.target.status);if(e.target.status == 200){
+      if(e.target.status == 200){
         // redirect to appjacket.ca if in canada
         window.location.replace("https://appjacket.ca");
       }
